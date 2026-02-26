@@ -1,0 +1,87 @@
+<!-- Hero -->
+<section class="relative overflow-hidden text-white">
+  <div class="relative h-[280px] sm:h-[350px]">
+    <img ngSrc="assets/pastor/speaking-hero.jpg" fill priority
+         class="object-cover" alt="Pastor Abraham at a speaking engagement" />
+  </div>
+  <div class="absolute inset-0 bg-gradient-to-r from-pastor-navy/85 to-pastor-navy/50"></div>
+  <div class="absolute inset-0 flex items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <p class="text-pastor-gold uppercase tracking-widest text-sm font-semibold mb-2">Church &amp; Conference Speaker</p>
+      <h1 class="text-4xl sm:text-5xl font-bold">Speaking Engagements</h1>
+      <p class="text-gray-200 mt-3 max-w-lg">
+        Biblical, practical, and transferable messages for churches, conferences, and leadership gatherings.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Topics + Sidebar -->
+<section class="bg-white py-16 sm:py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-[1.7fr_1fr] gap-10">
+      <!-- Main topic list -->
+      <div>
+        <h2 class="text-2xl font-bold text-pastor-navy mb-8">Key Topics I Speak On</h2>
+        <div class="space-y-6">
+          @for (topic of topics; track topic.slug) {
+            <article class="group border border-gray-100 rounded-xl p-5 hover:border-pastor-gold/40 hover:shadow-md transition-all">
+              <h3 class="text-lg font-semibold text-pastor-navy mb-2 group-hover:text-pastor-gold transition-colors">
+                {{ topic.title }}
+              </h3>
+              <p class="text-sm text-gray-600 mb-3 leading-relaxed">{{ topic.synopsis }}</p>
+              <a [routerLink]="['/speaking', topic.slug]"
+                 class="inline-flex items-center gap-1 text-sm text-pastor-gold font-medium hover:underline no-underline">
+                Learn more
+                <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">&rarr;</span>
+              </a>
+            </article>
+          }
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="space-y-8">
+        <a routerLink="/invite"
+           class="btn-pastor w-full text-center no-underline block text-lg">
+          Invite Me to Speak
+        </a>
+
+        <!-- Testimonials -->
+        <div class="bg-pastor-ivory rounded-xl p-6">
+          <h3 class="text-lg font-semibold text-pastor-navy mb-5">What People Say</h3>
+          <div class="space-y-5">
+            <div class="rounded-lg overflow-hidden">
+              <div class="relative h-36">
+                <img ngSrc="assets/pastor/testimonial-1.jpg" fill
+                     class="object-cover" alt="Ministry event attendees" />
+              </div>
+              <div class="bg-white p-4 border border-gray-100 rounded-b-lg">
+                <p class="text-sm text-gray-600 italic leading-relaxed">
+                  &ldquo;His message brought clarity and renewed purpose to our leadership team.&rdquo;
+                </p>
+              </div>
+            </div>
+            <div class="rounded-lg overflow-hidden">
+              <div class="relative h-36">
+                <img ngSrc="assets/pastor/testimonial-2.jpg" fill
+                     class="object-cover" alt="Conference participants" />
+              </div>
+              <div class="bg-white p-4 border border-gray-100 rounded-b-lg">
+                <p class="text-sm text-gray-600 italic leading-relaxed">
+                  &ldquo;Practical, biblical, and deeply transformative. Our congregation was moved.&rdquo;
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pastor Image -->
+        <div class="relative h-64 rounded-xl overflow-hidden shadow-md">
+          <img ngSrc="assets/pastor/topic-insight.jpg" fill
+               class="object-cover" alt="Pastor Abraham in ministry" />
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

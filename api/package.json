@@ -1,0 +1,25 @@
+{
+  "name": "pastor-activefaith-functions",
+  "version": "1.0.0",
+  "description": "Azure Functions API for pastor.activefaith.church",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf dist",
+    "prestart": "npm run build",
+    "start": "func start",
+    "test": "npm run build && node --test dist/functions/api-handler.test.js"
+  },
+  "dependencies": {
+    "@azure/communication-email": "^1.0.0",
+    "@azure/data-tables": "^13.2.2",
+    "@azure/functions": "^4.6.3",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.19",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,0 +1,63 @@
+<section class="py-16 sm:py-20 bg-pastor-ivory">
+  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 class="text-4xl sm:text-5xl font-bold text-pastor-navy mb-4 text-center">Contact</h1>
+    <p class="text-center text-gray-600 mb-10">
+      For general inquiries, press requests, or partnership discussions.
+      For speaking invitations, please use the <a routerLink="/invite" class="text-pastor-gold hover:underline">Invite page</a>.
+    </p>
+
+    @if (submitted()) {
+      <div class="bg-green-50 border border-green-200 rounded-lg p-8 text-center" role="alert">
+        <h2 class="text-2xl font-bold text-green-800 mb-2">Message Sent</h2>
+        <p class="text-green-700">Thank you for reaching out. We'll respond as soon as possible.</p>
+      </div>
+    } @else {
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="bg-white rounded-lg shadow-md p-8 space-y-6">
+        <!-- Honeypot -->
+        <div class="hidden" aria-hidden="true">
+          <label for="hp">Leave blank</label>
+          <input id="hp" formControlName="honeypot" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name *</label>
+          <input id="name" formControlName="name" type="text"
+                 class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pastor-gold focus:border-pastor-gold" />
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+          <input id="email" formControlName="email" type="email"
+                 class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pastor-gold focus:border-pastor-gold" />
+        </div>
+
+        <div>
+          <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject *</label>
+          <input id="subject" formControlName="subject" type="text"
+                 class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pastor-gold focus:border-pastor-gold" />
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message *</label>
+          <textarea id="message" formControlName="message" rows="5"
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pastor-gold focus:border-pastor-gold"></textarea>
+        </div>
+
+        @if (errorMessage()) {
+          <div class="bg-red-50 border border-red-200 text-red-700 rounded-md p-3 text-sm" role="alert">
+            {{ errorMessage() }}
+          </div>
+        }
+
+        <button type="submit" [disabled]="submitting()"
+                class="btn-pastor w-full disabled:opacity-50 disabled:cursor-not-allowed">
+          @if (submitting()) {
+            Sending…
+          } @else {
+            Send Message
+          }
+        </button>
+      </form>
+    }
+  </div>
+</section>

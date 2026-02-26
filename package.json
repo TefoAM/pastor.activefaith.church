@@ -1,0 +1,15 @@
+{
+  "name": "pastor.activefaith.church",
+  "version": "0.0.1",
+  "description": "National ministry brand platform for Pastor Abraham Tshabuse",
+  "private": true,
+  "scripts": {
+    "install:all": "cd angular-app && npm install && cd ../api && npm install",
+    "start": "cd angular-app && npm start",
+    "build": "cd angular-app && npm run build",
+    "test": "cd angular-app && npm test",
+    "test:api": "cd api && npm test",
+    "typecheck": "cd angular-app && npm run typecheck",
+    "preflight": "npm run typecheck && npm run test && npm run test:api && npm run build"
+  }
+}

@@ -1,0 +1,73 @@
+/* Global styles for pastor.activefaith.church */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --pastor-gold: #C5A55A;
+  --pastor-charcoal: #2D2D2D;
+  --pastor-ivory: #FAF8F5;
+  --pastor-navy: #1B2A4A;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--pastor-charcoal);
+  background-color: var(--pastor-ivory);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+}
+
+.text-pastor-gold { color: var(--pastor-gold); }
+.bg-pastor-gold { background-color: var(--pastor-gold); }
+.border-pastor-gold { border-color: var(--pastor-gold); }
+.text-pastor-charcoal { color: var(--pastor-charcoal); }
+.bg-pastor-charcoal { background-color: var(--pastor-charcoal); }
+.text-pastor-navy { color: var(--pastor-navy); }
+.bg-pastor-navy { background-color: var(--pastor-navy); }
+.bg-pastor-ivory { background-color: var(--pastor-ivory); }
+
+/* Premium button */
+.btn-pastor {
+  background: var(--pastor-gold);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: filter 150ms ease, transform 150ms ease;
+}
+
+.btn-pastor:hover {
+  filter: brightness(0.9);
+  transform: translateY(-1px);
+}
+
+/* Outline variant */
+.btn-pastor-outline {
+  background: transparent;
+  color: var(--pastor-gold);
+  border: 2px solid var(--pastor-gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 150ms ease;
+}
+
+.btn-pastor-outline:hover {
+  background: var(--pastor-gold);
+  color: #fff;
+}

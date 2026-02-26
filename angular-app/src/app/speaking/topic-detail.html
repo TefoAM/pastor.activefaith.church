@@ -1,0 +1,107 @@
+@if (topic(); as topic) {
+  <!-- Hero -->
+  <section class="relative overflow-hidden text-white">
+    <div class="relative h-[280px] sm:h-[350px]">
+      <img ngSrc="assets/pastor/speaking-hero.jpg" fill priority
+           class="object-cover" alt="Pastor Abraham speaking on {{ topic.title }}" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-pastor-navy/85 to-pastor-navy/50"></div>
+    <div class="absolute inset-0 flex items-center">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <p class="text-pastor-gold uppercase tracking-widest text-sm font-semibold mb-2">Speaking Topic</p>
+        <h1 class="text-4xl sm:text-5xl font-bold">{{ topic.title }}</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="bg-white py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <a routerLink="/speaking"
+         class="inline-flex items-center gap-1 text-pastor-gold text-sm hover:underline no-underline mb-8">
+        <span aria-hidden="true">&larr;</span> All Topics
+      </a>
+
+      <div class="grid grid-cols-1 lg:grid-cols-[1.7fr_1fr] gap-10">
+        <article>
+          <h2 class="text-2xl font-semibold text-pastor-navy mb-3">Empowering Leaders to Inspire Change</h2>
+          <p class="text-gray-700 leading-relaxed mb-8">{{ topic.synopsis }}</p>
+
+          <h3 class="text-xl font-semibold text-pastor-navy mb-5">Key Takeaways</h3>
+          <ul class="space-y-3 mb-10">
+            @for (takeaway of topic.takeaways; track takeaway) {
+              <li class="flex gap-3 text-gray-700">
+                <span class="text-pastor-gold font-bold mt-0.5 shrink-0" aria-hidden="true">&#10003;</span>
+                <span>{{ takeaway }}</span>
+              </li>
+            }
+          </ul>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-lg font-semibold text-pastor-navy mb-3">Audience Types</h3>
+              <div class="space-y-2 text-sm text-gray-700">
+                @for (audience of topic.audienceTypes; track audience) {
+                  <p class="flex items-center gap-2">
+                    <span class="h-1.5 w-1.5 rounded-full bg-pastor-gold shrink-0" aria-hidden="true"></span>
+                    {{ audience }}
+                  </p>
+                }
+              </div>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-pastor-navy mb-3">Session Formats</h3>
+              <div class="space-y-2 text-sm text-gray-700">
+                @for (format of topic.sessionFormats; track format) {
+                  <p class="flex items-center gap-2">
+                    <span class="h-1.5 w-1.5 rounded-full bg-pastor-gold shrink-0" aria-hidden="true"></span>
+                    {{ format }}
+                  </p>
+                }
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="mt-10 bg-pastor-navy text-white rounded-xl p-8">
+            <h3 class="text-xl font-bold mb-2">Invite Pastor Abraham</h3>
+            <p class="text-gray-300 mb-5">Bring biblical leadership to your event.</p>
+            <a routerLink="/invite" [queryParams]="{topic: topic.title}" class="btn-pastor no-underline">
+              Request this topic
+            </a>
+          </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="space-y-8">
+          <div class="bg-pastor-ivory rounded-xl p-5">
+            <h3 class="text-lg font-semibold text-pastor-navy mb-4">Core Insights</h3>
+            <div class="relative h-44 rounded-lg overflow-hidden mb-4">
+              <img ngSrc="assets/pastor/topic-insight.jpg" fill
+                   class="object-cover" alt="Ministry insights" />
+            </div>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Visionary leadership with practical discipleship outcomes.
+            </p>
+          </div>
+
+          <div class="bg-pastor-ivory rounded-xl p-5">
+            <h3 class="text-lg font-semibold text-pastor-navy mb-4">Pastor in Ministry</h3>
+            <div class="relative h-44 rounded-lg overflow-hidden mb-4">
+              <img ngSrc="assets/pastor/ministry-1.jpg" fill
+                   class="object-cover" alt="Pastor Abraham during ministry" />
+            </div>
+            <a routerLink="/media" class="inline-flex items-center gap-1 text-sm text-pastor-gold font-medium hover:underline no-underline">
+              Go to media <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+} @else {
+  <section class="py-20 text-center">
+    <h1 class="text-2xl text-gray-500">Topic not found</h1>
+    <a routerLink="/speaking" class="text-pastor-gold hover:underline no-underline mt-4 inline-block">Back to all topics</a>
+  </section>
+}
