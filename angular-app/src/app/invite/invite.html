@@ -1,10 +1,10 @@
 <!-- Hero -->
 <section class="relative overflow-hidden text-white">
   <div class="relative h-[280px] sm:h-[350px]">
-    <img ngSrc="assets/pastor/hero-main.jpg" fill priority
-         class="object-cover" alt="Pastor Abraham speaking at an event" />
+    <img ngSrc="assets/pastor/speaking-hero.jpg" fill priority
+         class="object-cover object-center" alt="Pastor Abraham speaking at an event" />
   </div>
-  <div class="absolute inset-0 bg-gradient-to-r from-pastor-navy/85 to-pastor-navy/50"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-pastor-navy/90 via-pastor-navy/70 to-pastor-navy/30"></div>
   <div class="absolute inset-0 flex items-center">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <p class="text-pastor-gold uppercase tracking-widest text-sm font-semibold mb-2">Book a Speaking Engagement</p>
@@ -28,7 +28,7 @@
       </div>
     } @else {
       <div class="grid grid-cols-1 lg:grid-cols-[1.8fr_1fr] gap-10 items-start">
-        <form [formGroup]="form" (ngSubmit)="onSubmit()" class="bg-white rounded-xl shadow-md p-8 space-y-6">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" class="bg-white/80 backdrop-blur-md rounded-xl shadow-lg border border-white/30 p-8 space-y-6" novalidate>
 
         <!-- Honeypot (hidden from users) -->
         <div class="hidden" aria-hidden="true">
@@ -43,11 +43,17 @@
             <label for="organizerName" class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
             <input id="organizerName" formControlName="organizerName" type="text"
                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pastor-gold focus:border-pastor-gold" />
+            @if (form.get('organizerName')?.invalid && form.get('organizerName')?.touched) {
+              <p class="mt-1 text-xs text-red-600" role="alert">Full name is required.</p>
+            }
           </div>
           <div>
             <label for="organizerRole" class="block text-sm font-medium text-gray-700 mb-1">Role / Title *</label>
             <input id="organizerRole" formControlName="organizerRole" type="text"
                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pastor-gold focus:border-pastor-gold" />
+            @if (form.get('organizerRole')?.invalid && form.get('organizerRole')?.touched) {
+              <p class="mt-1 text-xs text-red-600" role="alert">Role is required.</p>
+            }
           </div>
         </div>
 
@@ -56,6 +62,9 @@
             <label for="organization" class="block text-sm font-medium text-gray-700 mb-1">Organization / Church *</label>
             <input id="organization" formControlName="organization" type="text"
                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pastor-gold focus:border-pastor-gold" />
+            @if (form.get('organization')?.invalid && form.get('organization')?.touched) {
+              <p class="mt-1 text-xs text-red-600" role="alert">Organization is required.</p>
+            }
           </div>
           <div>
             <label for="organizerWebsite" class="block text-sm font-medium text-gray-700 mb-1">Website</label>
@@ -69,11 +78,21 @@
             <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
             <input id="email" formControlName="email" type="email"
                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pastor-gold focus:border-pastor-gold" />
+            @if (form.get('email')?.touched) {
+              @if (form.get('email')?.hasError('required')) {
+                <p class="mt-1 text-xs text-red-600" role="alert">Email is required.</p>
+              } @else if (form.get('email')?.hasError('email')) {
+                <p class="mt-1 text-xs text-red-600" role="alert">Enter a valid email address.</p>
+              }
+            }
           </div>
           <div>
             <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone / WhatsApp *</label>
             <input id="phone" formControlName="phone" type="tel"
                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pastor-gold focus:border-pastor-gold" />
+            @if (form.get('phone')?.invalid && form.get('phone')?.touched) {
+              <p class="mt-1 text-xs text-red-600" role="alert">Phone number is required.</p>
+            }
           </div>
         </div>
 
@@ -85,11 +104,17 @@
             <label for="eventName" class="block text-sm font-medium text-gray-700 mb-1">Event Name *</label>
             <input id="eventName" formControlName="eventName" type="text"
                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pastor-gold focus:border-pastor-gold" />
+            @if (form.get('eventName')?.invalid && form.get('eventName')?.touched) {
+              <p class="mt-1 text-xs text-red-600" role="alert">Event name is required.</p>
+            }
           </div>
           <div>
             <label for="city" class="block text-sm font-medium text-gray-700 mb-1">City *</label>
             <input id="city" formControlName="city" type="text"
                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pastor-gold focus:border-pastor-gold" />
+            @if (form.get('city')?.invalid && form.get('city')?.touched) {
+              <p class="mt-1 text-xs text-red-600" role="alert">City is required.</p>
+            }
           </div>
         </div>
 
@@ -106,11 +131,17 @@
               <option value="online">Virtual / Online</option>
               <option value="other">Other</option>
             </select>
+            @if (form.get('venueType')?.invalid && form.get('venueType')?.touched) {
+              <p class="mt-1 text-xs text-red-600" role="alert">Please select a venue type.</p>
+            }
           </div>
           <div>
             <label for="proposedDates" class="block text-sm font-medium text-gray-700 mb-1">Proposed Date(s) *</label>
             <input id="proposedDates" formControlName="proposedDates" type="text" placeholder="e.g. 15-17 March 2026"
                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pastor-gold focus:border-pastor-gold" />
+            @if (form.get('proposedDates')?.invalid && form.get('proposedDates')?.touched) {
+              <p class="mt-1 text-xs text-red-600" role="alert">Proposed dates are required.</p>
+            }
           </div>
         </div>
 
@@ -137,6 +168,9 @@
               <option value="500-1000">500–1,000</option>
               <option value="1000+">1,000+</option>
             </select>
+            @if (form.get('audienceSize')?.invalid && form.get('audienceSize')?.touched) {
+              <p class="mt-1 text-xs text-red-600" role="alert">Please select an audience size.</p>
+            }
           </div>
           <div>
             <label for="audienceType" class="block text-sm font-medium text-gray-700 mb-1">Audience Type *</label>
@@ -150,6 +184,9 @@
               <option value="women">Women</option>
               <option value="professionals">Christian Professionals</option>
             </select>
+            @if (form.get('audienceType')?.invalid && form.get('audienceType')?.touched) {
+              <p class="mt-1 text-xs text-red-600" role="alert">Please select an audience type.</p>
+            }
           </div>
         </div>
 
@@ -158,6 +195,9 @@
           <textarea id="theme" formControlName="theme" rows="3"
                     class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pastor-gold focus:border-pastor-gold"
                     placeholder="Describe the event theme, expectations, or specific topic you'd like covered."></textarea>
+          @if (form.get('theme')?.invalid && form.get('theme')?.touched) {
+            <p class="mt-1 text-xs text-red-600" role="alert">Please describe the event theme.</p>
+          }
         </div>
 
         <div>
@@ -170,10 +210,15 @@
         <div class="flex items-start gap-3">
           <input id="consentProcessing" formControlName="consentProcessing" type="checkbox"
                  class="mt-1 h-4 w-4 rounded border-gray-300 text-pastor-gold focus:ring-pastor-gold" />
-          <label for="consentProcessing" class="text-sm text-gray-600">
-            I consent to this information being processed to respond to my invitation request,
-            in accordance with the <a routerLink="/privacy-policy" class="text-pastor-gold hover:underline">Privacy Policy</a>. *
-          </label>
+          <div>
+            <label for="consentProcessing" class="text-sm text-gray-600">
+              I consent to this information being processed to respond to my invitation request,
+              in accordance with the <a routerLink="/privacy-policy" class="text-pastor-gold hover:underline">Privacy Policy</a>. *
+            </label>
+            @if (form.get('consentProcessing')?.invalid && form.get('consentProcessing')?.touched) {
+              <p class="mt-1 text-xs text-red-600" role="alert">You must consent to proceed.</p>
+            }
+          </div>
         </div>
 
         @if (errorMessage()) {

@@ -1,55 +1,97 @@
-<section class="py-16 sm:py-20 bg-pastor-ivory">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <h1 class="text-4xl sm:text-5xl font-bold text-pastor-navy mb-4">Media</h1>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        Sermons, teachings, and highlight clips from Pastor Abraham Tshabuse.
-      </p>
+<!-- Hero -->
+<section class="relative overflow-hidden text-white">
+  <div class="relative min-h-[420px] md:min-h-[480px]">
+    <img ngSrc="assets/pastor/speaking-hero.jpg" fill
+         class="object-cover object-center" alt="Pastor Abraham teaching" />
+  </div>
+  <div class="absolute inset-0 bg-gradient-to-r from-pastor-navy via-pastor-navy/90 to-pastor-navy/40"></div>
+  <div class="absolute inset-0 flex items-center">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-pastor-gold uppercase tracking-widest text-sm font-semibold mb-3">Messages &amp; Resources</p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4">Sermons &amp; Media</h1>
+      <p class="text-lg text-gray-200 max-w-xl">Inspiring messages and resources from Pastor Abraham Tshabuse.</p>
     </div>
+  </div>
+</section>
 
-    <!-- Podcast Section -->
-    <div class="mb-16">
-      <h2 class="text-2xl font-bold text-pastor-navy mb-6">Podcast</h2>
-      <div class="bg-white rounded-lg shadow-md p-8 text-center">
-        <p class="text-gray-500 mb-4">
-          Listen to the ActiveFaith Church podcast featuring Christ-centred biblical teachings
-          from Pastor Abraham Tshabuse.
-        </p>
-        <a href="https://podcasts.apple.com/za/podcast/activefaith-church/id1465964955"
-           target="_blank" rel="noopener noreferrer"
-           class="btn-pastor-outline no-underline mr-3">
-          Apple Podcasts
-        </a>
-        <a href="https://open.spotify.com/show/3SrFPb3VGCMiMJCFP8KKGX"
-           target="_blank" rel="noopener noreferrer"
-           class="btn-pastor-outline no-underline">
-          Spotify
-        </a>
-      </div>
+<!-- Latest Sermons -->
+<section class="bg-white py-12 md:py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-10">
+      <p class="text-pastor-gold uppercase tracking-widest text-sm font-semibold mb-2">Recent Teachings</p>
+      <h2 class="text-2xl md:text-3xl font-semibold text-pastor-navy">Latest Sermons</h2>
     </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      @for (sermon of sermons; track sermon.title) {
+        <div class="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-white/70 backdrop-blur-md border border-white/20">
+          <div class="relative h-48 overflow-hidden">
+            <img [ngSrc]="sermon.thumbnail" fill
+                 class="object-cover transition-transform duration-300 group-hover:scale-105"
+                 [alt]="sermon.title" />
+            <div class="absolute inset-0 bg-gradient-to-t from-pastor-navy/40 to-transparent group-hover:from-pastor-navy/20 transition-colors"></div>
+          </div>
+          <div class="p-5">
+            <p class="text-xs text-gray-400 mb-1">{{ sermon.date }}</p>
+            <h3 class="text-base font-semibold text-pastor-navy mb-3 group-hover:text-pastor-gold transition-colors">
+              {{ sermon.title }}
+            </h3>
+            <a [href]="sermon.watchUrl" target="_blank" rel="noopener noreferrer"
+               class="btn-pastor text-sm no-underline">Watch</a>
+          </div>
+        </div>
+      }
+    </div>
+    <div class="mt-8 text-center">
+      <a href="https://www.youtube.com/@ActiveFaithChurch" target="_blank" rel="noopener noreferrer"
+         class="btn-pastor-outline no-underline">View All on YouTube</a>
+    </div>
+  </div>
+</section>
 
-    <!-- YouTube Section -->
-    <div class="mb-16">
-      <h2 class="text-2xl font-bold text-pastor-navy mb-6">YouTube</h2>
-      <div class="bg-white rounded-lg shadow-md p-8 text-center">
-        <p class="text-gray-500 mb-4">
-          Watch sermons, highlight reels, and teaching clips on YouTube.
-        </p>
-        <a href="https://www.youtube.com/@ActiveFaithChurch"
-           target="_blank" rel="noopener noreferrer"
-           class="btn-pastor-outline no-underline">
-          Visit YouTube Channel
+<!-- Podcast & Videos -->
+<section class="bg-pastor-ivory py-12 md:py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-10">
+      <p class="text-pastor-gold uppercase tracking-widest text-sm font-semibold mb-2">Listen &amp; Watch</p>
+      <h2 class="text-2xl md:text-3xl font-semibold text-pastor-navy">Podcast &amp; Videos</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      @for (episode of podcasts; track episode.title) {
+        <a [href]="episode.url" target="_blank" rel="noopener noreferrer"
+           class="group block rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 no-underline bg-white/70 backdrop-blur-md border border-white/20">
+          <div class="relative h-40 overflow-hidden">
+            <img [ngSrc]="episode.thumbnail" fill
+                 class="object-cover transition-transform duration-300 group-hover:scale-105"
+                 [alt]="episode.title" />
+            <div class="absolute inset-0 bg-gradient-to-t from-pastor-navy/40 to-transparent group-hover:from-pastor-navy/20 transition-colors"></div>
+          </div>
+          <div class="p-4">
+            <p class="text-xs text-pastor-gold font-medium mb-1">{{ episode.platform }}</p>
+            <h3 class="text-sm font-semibold text-pastor-navy group-hover:text-pastor-gold transition-colors leading-snug">
+              {{ episode.title }}
+            </h3>
+          </div>
         </a>
-      </div>
+      }
     </div>
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+      <a href="https://podcasts.apple.com/za/podcast/activefaith-church/id1465964955"
+         target="_blank" rel="noopener noreferrer"
+         class="btn-pastor-outline no-underline">Apple Podcasts</a>
+      <a href="https://open.spotify.com/show/3SrFPb3VGCMiMJCFP8KKGX"
+         target="_blank" rel="noopener noreferrer"
+         class="btn-pastor-outline no-underline">Spotify</a>
+    </div>
+  </div>
+</section>
 
-    <!-- Media Kit -->
-    <div class="bg-pastor-navy text-white rounded-xl p-10 text-center">
-      <h2 class="text-2xl sm:text-3xl font-bold mb-4">Need a Media Kit?</h2>
-      <p class="text-gray-300 mb-6">
-        Download bios, photos, topics, and booking guidelines in one package.
-      </p>
-      <p class="text-gray-400 text-sm italic">Coming soon — Phase 2</p>
-    </div>
+<!-- Media Kit CTA -->
+<section class="bg-pastor-navy py-16">
+  <div class="max-w-4xl mx-auto px-6 text-center bg-white/5 backdrop-blur-sm rounded-2xl py-12 border border-white/10">
+    <h2 class="text-2xl sm:text-3xl font-semibold text-white mb-4">Need a Media Kit?</h2>
+    <p class="text-gray-300 mb-6 max-w-xl mx-auto">
+      Download bios, photos, speaking topics, and booking guidelines in one package.
+    </p>
+    <a routerLink="/invite" class="btn-pastor no-underline">Request Speaker Package</a>
   </div>
 </section>

@@ -1,12 +1,12 @@
 <!-- Hero -->
 <section class="relative overflow-hidden text-white">
   <div class="relative h-[420px] sm:h-[520px] lg:h-[600px]">
-    <img ngSrc="assets/pastor/hero-main.jpg" fill priority
-         class="object-cover" alt="Pastor Abraham speaking at a ministry event" />
+    <img ngSrc="assets/pastor/pastor-portrait.jpg" fill priority
+         class="object-cover object-[center_20%]" alt="Pastor Abraham Tshabuse" />
   </div>
-  <div class="absolute inset-0 bg-gradient-to-r from-pastor-navy/80 via-pastor-navy/60 to-transparent"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-pastor-navy/90 via-pastor-navy/70 to-pastor-navy/30"></div>
   <div class="absolute inset-0 flex items-center">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto px-6">
       <p class="text-pastor-gold uppercase tracking-widest text-sm font-semibold mb-3">Pastor &amp; Speaker</p>
       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4">
         Activating Faith.<br />
@@ -24,86 +24,64 @@
   </div>
 </section>
 
-<!-- Speaking Topics -->
-<section class="bg-white py-16 sm:py-20">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-10">
-      <p class="text-pastor-gold uppercase tracking-widest text-sm font-semibold mb-2">What I Speak On</p>
-      <h2 class="text-3xl sm:text-4xl font-bold text-pastor-navy">Key Speaking Topics</h2>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <a routerLink="/speaking/governance-excellence-sustainable-church"
-         class="group block rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow no-underline bg-white">
+<!-- Tagline Strip -->
+<section class="bg-white/60 backdrop-blur-sm">
+  <div class="max-w-6xl mx-auto px-6">
+    <p class="text-center text-xl md:text-2xl font-semibold text-pastor-navy py-10">
+      Leadership. Discipleship. Impact
+    </p>
+  </div>
+</section>
+
+<!-- Highlight Cards -->
+<section class="bg-white py-12 md:py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <a routerLink="/media"
+         class="group block rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 no-underline bg-white/70 backdrop-blur-md border border-white/20">
         <div class="relative h-52 overflow-hidden">
           <img ngSrc="assets/pastor/leadership-card.jpg" fill
                class="object-cover transition-transform duration-300 group-hover:scale-105"
                alt="Leadership speaking engagement" />
-          <div class="absolute inset-0 bg-pastor-navy/30 group-hover:bg-pastor-navy/10 transition-colors"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-pastor-navy/40 to-transparent group-hover:from-pastor-navy/20 transition-colors"></div>
         </div>
         <div class="p-5">
-          <h3 class="text-lg font-semibold text-pastor-navy mb-1 group-hover:text-pastor-gold transition-colors">Leadership</h3>
-          <p class="text-sm text-gray-600">Practical frameworks for resilient Christian leadership.</p>
+          <h3 class="text-base font-semibold text-pastor-navy group-hover:text-pastor-gold transition-colors">Leadership</h3>
         </div>
       </a>
 
-      <a routerLink="/speaking/from-potential-to-purpose"
-         class="group block rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow no-underline bg-white">
+      <a routerLink="/media"
+         class="group block rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 no-underline bg-white/70 backdrop-blur-md border border-white/20">
         <div class="relative h-52 overflow-hidden">
           <img ngSrc="assets/pastor/discipleship-card.jpg" fill
                class="object-cover transition-transform duration-300 group-hover:scale-105"
                alt="Discipleship session" />
-          <div class="absolute inset-0 bg-pastor-navy/30 group-hover:bg-pastor-navy/10 transition-colors"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-pastor-navy/40 to-transparent group-hover:from-pastor-navy/20 transition-colors"></div>
         </div>
         <div class="p-5">
-          <h3 class="text-lg font-semibold text-pastor-navy mb-1 group-hover:text-pastor-gold transition-colors">Discipleship</h3>
-          <p class="text-sm text-gray-600">From salvation to purpose through a clear discipleship pathway.</p>
+          <h3 class="text-base font-semibold text-pastor-navy group-hover:text-pastor-gold transition-colors">Discipleship</h3>
         </div>
       </a>
 
-      <a routerLink="/speaking/rise-relate-reach"
-         class="group block rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow no-underline bg-white">
+      <a routerLink="/media"
+         class="group block rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 no-underline bg-white/70 backdrop-blur-md border border-white/20">
         <div class="relative h-52 overflow-hidden">
           <img ngSrc="assets/pastor/strategy-card.jpg" fill
                class="object-cover transition-transform duration-300 group-hover:scale-105"
                alt="Church strategy workshop" />
-          <div class="absolute inset-0 bg-pastor-navy/30 group-hover:bg-pastor-navy/10 transition-colors"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-pastor-navy/40 to-transparent group-hover:from-pastor-navy/20 transition-colors"></div>
         </div>
         <div class="p-5">
-          <h3 class="text-lg font-semibold text-pastor-navy mb-1 group-hover:text-pastor-gold transition-colors">Church Strategy</h3>
-          <p class="text-sm text-gray-600">Governance and ministry systems that help churches grow sustainably.</p>
+          <h3 class="text-base font-semibold text-pastor-navy group-hover:text-pastor-gold transition-colors">Church Strategy</h3>
         </div>
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- Ministry Gallery -->
-<section class="py-16 sm:py-20 bg-pastor-ivory">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-10">
-      <p class="text-pastor-gold uppercase tracking-widest text-sm font-semibold mb-2">In Ministry</p>
-      <h2 class="text-3xl sm:text-4xl font-bold text-pastor-navy">Ministry in Action</h2>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="relative h-56 rounded-xl overflow-hidden shadow-md">
-        <img ngSrc="assets/pastor/ministry-1.jpg" fill
-             class="object-cover" alt="Pastor Abraham ministry moment" />
-      </div>
-      <div class="relative h-56 rounded-xl overflow-hidden shadow-md">
-        <img ngSrc="assets/pastor/gallery-1.jpg" fill
-             class="object-cover" alt="Ministry outreach moment" />
-      </div>
-      <div class="relative h-56 rounded-xl overflow-hidden shadow-md sm:col-span-2 lg:col-span-1">
-        <img ngSrc="assets/pastor/testimonial-1.jpg" fill
-             class="object-cover" alt="Community ministry event" />
-      </div>
     </div>
   </div>
 </section>
 
 <!-- CTA Banner -->
 <section class="bg-pastor-navy py-16">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  <div class="max-w-4xl mx-auto px-6 text-center bg-white/5 backdrop-blur-sm rounded-2xl py-12 border border-white/10">
     <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Bring Biblical Leadership to Your Event</h2>
     <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
       Whether it's a conference, church service, or leadership retreat — let's partner to equip and activate your community.

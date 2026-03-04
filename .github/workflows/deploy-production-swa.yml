@@ -1,0 +1,79 @@
+name: Deploy Production (SWA)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'angular-app/**'
+      - 'api/**'
+      - '.github/workflows/deploy-production-swa.yml'
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: |
+            angular-app/package-lock.json
+            api/package-lock.json
+
+      - name: Install frontend dependencies
+        run: npm ci
+        working-directory: ./angular-app
+
+      - name: Typecheck
+        run: npm run typecheck
+        working-directory: ./angular-app
+
+      - name: Unit tests
+        run: npm run test
+        working-directory: ./angular-app
+
+      - name: Install API dependencies
+        run: npm ci
+        working-directory: ./api
+
+      - name: API build & test
+        run: npm run test
+        working-directory: ./api
+
+  build_and_deploy_job:
+    needs: test
+    runs-on: ubuntu-latest
+    name: Build and Deploy Job
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+          lfs: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build And Deploy
+        id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.PASTOR_PRODUCTION_SWA_DEPLOYMENT_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: "upload"
+          app_location: "angular-app"
+          api_location: "api"
+          output_location: "dist/pastor-app/browser"
+          app_build_command: "npm run build"
+          api_build_command: "npm run build"

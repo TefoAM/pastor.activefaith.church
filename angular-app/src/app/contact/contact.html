@@ -12,7 +12,7 @@
         <p class="text-green-700">Thank you for reaching out. We'll respond as soon as possible.</p>
       </div>
     } @else {
-      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="bg-white rounded-lg shadow-md p-8 space-y-6">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="bg-white/80 backdrop-blur-md rounded-xl shadow-lg border border-white/30 p-8 space-y-6">
         <!-- Honeypot -->
         <div class="hidden" aria-hidden="true">
           <label for="hp">Leave blank</label>

@@ -1,8 +1,29 @@
+<!-- Split Hero -->
+<section class="relative overflow-hidden bg-pastor-navy text-white">
+  <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <!-- Left: Text -->
+      <div>
+        <p class="text-pastor-gold uppercase tracking-widest text-sm font-semibold mb-3">Lead Pastor &amp; Speaker</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4">About Pastor Abraham</h1>
+        <p class="text-base md:text-lg text-gray-300 leading-7 mb-6">
+          Empowering leaders for a sustainable faith. A voice that bridges Scripture, leadership, and practical discipleship
+          for churches and conferences across South Africa and beyond.
+        </p>
+        <a routerLink="/invite" class="btn-pastor no-underline">Invite to Speak</a>
+      </div>
+      <!-- Right: Portrait -->
+      <div class="relative h-80 md:h-[480px] rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+        <img ngSrc="assets/pastor/pastor-portrait.jpg" fill priority
+             class="object-cover object-[center_15%]" alt="Pastor Abraham Tshabuse portrait" />
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="py-16 sm:py-20 bg-pastor-ivory">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h1 class="text-4xl sm:text-5xl font-bold text-pastor-navy mb-8 text-center">
-      About Pastor Abraham Tshabuse
-    </h1>
+    <h2 class="text-2xl font-semibold text-pastor-navy mb-8">Biography</h2>
 
     <div class="prose prose-lg max-w-none text-gray-700">
       <p>
@@ -31,6 +52,13 @@
         <li><strong>Relate</strong> — Fellowship and partnership for a meaningful life.</li>
         <li><strong>Reach</strong> — Ministry and purpose to do life no matter what.</li>
       </ul>
+
+      <!-- Inline image mid-biography -->
+      <div class="relative h-64 sm:h-80 rounded-lg overflow-hidden my-10">
+        <img ngSrc="assets/pastor/ministry-1.jpg" fill
+             class="object-cover object-center" alt="Pastor Abraham in ministry" />
+        <div class="absolute inset-0 bg-pastor-navy/10"></div>
+      </div>
 
       <h2 class="text-2xl font-bold text-pastor-navy mt-10 mb-4">Governance &amp; Excellence</h2>
       <p>

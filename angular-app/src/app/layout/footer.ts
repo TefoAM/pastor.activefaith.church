@@ -6,8 +6,9 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <footer class="bg-pastor-navy text-white py-12" role="contentinfo">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer class="bg-pastor-navy text-white" role="contentinfo">
+      <div class="border-t border-white/10 bg-white/5 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Brand -->
           <div>
@@ -44,6 +45,7 @@ import { RouterLink } from '@angular/router';
               &copy; {{ currentYear }} Pastor Abraham Tshabuse. All rights reserved.
             </p>
           </div>
+        </div>
         </div>
       </div>
     </footer>

@@ -2,41 +2,46 @@
 
 ## Code Style
 - Strict TypeScript; avoid `any`.
-- Follow `.editorconfig`: UTF-8, 2 spaces, trim trailing whitespace, final newline.
-- Single quotes, `printWidth: 100` (from `angular-app/package.json` prettier config).
-- Angular standalone components with signal-first patterns; tests co-located as `*.spec.ts`.
-- Use kebab-case feature folders under `angular-app/src/app/`.
+- No `.editorconfig` — formatting governed by Prettier config in `angular-app/package.json`: single quotes, `printWidth: 100`.
+- Indentation: 2 spaces. UTF-8, trim trailing whitespace, final newline.
+- Standalone components (do NOT set `standalone: true` — Angular 21 default); tests co-located as `*.spec.ts`.
+- Kebab-case feature folders under `angular-app/src/app/`.
 
 ## Architecture
-- Monorepo split: Angular frontend in `angular-app/`, Azure Functions backend in `api/`.
-- Frontend is SSR/hybrid via Angular SSR with SWA hosting.
-- API uses Azure Functions v4 with **Azure Table Storage** (not Cosmos DB) for form submissions.
-- Form data persisted to `PastorSubmissions` table with partitionKey = formType.
-- Infrastructure lives in `activefaith-infra/infra/app/pastor-*.tf`, sharing the same resource group.
+- Monorepo: Angular 21 frontend in `angular-app/`, Azure Functions v4 backend in `api/`.
+- Frontend uses **zone.js** (not zoneless) and SSR/hybrid rendering via SWA hosting.
+- All routes **lazy-loaded** via `loadComponent()` — see `angular-app/src/app/app.routes.ts` (8 routes).
+- `ChangeDetectionStrategy.OnPush` on **all** components.
+- API: single handler at `api/src/functions/api-handler.ts` (Zod validation) + `api/src/functions/ping.ts`.
+- Data: **Azure Table Storage** (`stpastorafaith` account, `PastorSubmissions` table, partitionKey = formType). NOT Cosmos DB.
+- Services: `api.service.ts`, `error-handler.service.ts`, `monitoring.service.ts`.
+- Infrastructure: `activefaith-infra/infra/app/pastor-*.tf`, same resource group (`rg-activefaith`).
 
 ## Build and Test
-- From repo root: `npm run install:all`, `npm run start`, `npm run build`, `npm run test`, `npm run test:api`, `npm run typecheck`, `npm run preflight`.
-- Frontend (`angular-app`): `npm run build`, `npm run test` (Vitest), `npm run e2e` (Playwright), `npm run typecheck`.
-- API (`api`): `npm run build`, `npm run test`.
+- `npm run install:all` — installs both `angular-app/` and `api/` dependencies.
+- `npm run preflight` — `typecheck + test + test:api + build` (run before pushing).
+- `npm run test` — Vitest (frontend). `npm run test:api` — Node `--test` runner (API).
+- `npm run e2e` — Playwright (Chromium). `npm run e2e:headed` — with visible browser.
+- `npm run typecheck` — `tsc --noEmit -p tsconfig.app.json`.
+- API: `cd api && npm run build && node --test dist/functions/api-handler.test.js`.
 
 ## Project Conventions
 - Three form types: `speakerInvite`, `contact`, `mediaKit`.
-- Honeypot anti-spam on all forms.
-- POPIA-compliant consent flows: transactional vs marketing.
-- No reCAPTCHA (simpler than activefaith.church); rely on honeypot + SWA rate limiting.
+- Honeypot anti-spam on all forms — no reCAPTCHA (simpler than activefaith.church).
+- POPIA-compliant consent: distinguish transactional vs marketing consent.
+- 11 approved images in `angular-app/public/assets/pastor/` — do NOT add external images.
 - Keep changes scoped by package (`angular-app` vs `api`).
 
-## Angular Best Practices
-- Always use standalone components (do NOT set `standalone: true` — Angular 21 default).
-- Use signals for state, `computed()` for derived state.
-- Use `input()` and `output()` functions instead of decorators.
-- Set `changeDetection: ChangeDetectionStrategy.OnPush`.
-- Use native control flow (`@if`, `@for`, `@switch`).
-- Use `inject()` function instead of constructor injection.
-- Lazy-load route components.
+## Angular Patterns (enforced in all components)
+- `inject()` function — no constructor injection.
+- `input()` / `output()` functions — not `@Input()` / `@Output()` decorators.
+- Signals for state (`signal()`, `computed()`).
+- Native control flow: `@if`, `@for`, `@switch`.
+- `NgOptimizedImage` for all static images (`ngSrc` + `fill`).
+- Lazy-load all route components.
 
 ## Integration Points
 - Frontend-to-API: through `ApiService` at `/api/*`.
-- Shared infrastructure: same Azure resource group (`rg-activefaith`), same Cloudflare zone (`activefaith.church`).
-- DNS: `pastor.activefaith.church` subdomain CNAME to SWA.
+- DNS: `pastor.activefaith.church` CNAME to SWA via Cloudflare zone (`activefaith.church`).
 - Table Storage account: `stpastorafaith` (separate from church site storage).
+- No CI/CD pipeline yet — manual deploy via SWA CLI.

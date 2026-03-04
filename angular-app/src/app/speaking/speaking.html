@@ -25,7 +25,7 @@
         <h2 class="text-2xl font-bold text-pastor-navy mb-8">Key Topics I Speak On</h2>
         <div class="space-y-6">
           @for (topic of topics; track topic.slug) {
-            <article class="group border border-gray-100 rounded-xl p-5 hover:border-pastor-gold/40 hover:shadow-md transition-all">
+            <article class="group rounded-xl p-5 bg-white/70 backdrop-blur-md border border-white/20 shadow-sm hover:border-pastor-gold/40 hover:shadow-lg transition-all duration-300">
               <h3 class="text-lg font-semibold text-pastor-navy mb-2 group-hover:text-pastor-gold transition-colors">
                 {{ topic.title }}
               </h3>
@@ -48,7 +48,7 @@
         </a>
 
         <!-- Testimonials -->
-        <div class="bg-pastor-ivory rounded-xl p-6">
+        <div class="bg-pastor-ivory/80 backdrop-blur-sm rounded-xl p-6 border border-white/30 shadow-md">
           <h3 class="text-lg font-semibold text-pastor-navy mb-5">What People Say</h3>
           <div class="space-y-5">
             <div class="rounded-lg overflow-hidden">
