@@ -12,6 +12,7 @@ Single source of truth for every material Markdown change (creation or edit).
 
 | Date       | Paths                                           | Type    | Summary                                            | Author                 | Commit/PR |
 | ---------- | ----------------------------------------------- | ------- | -------------------------------------------------- | ---------------------- | --------- |
+| 2026-03-09 | docs/TODO.md, mcp.json                          | major   | Completed CODER tasks: asset alignment, tech stack validation, and missing configs/tests. | Gemini CLI             | TBD       |
 | 2026-03-08 | docs/TODO.md,docs/LEDGER.md | new | Initialize pastor docs task tracker and documentation ledger modeled after church repo format | TefoAM <tefoam@outlook.com> | TBD |
 
 ### Notes

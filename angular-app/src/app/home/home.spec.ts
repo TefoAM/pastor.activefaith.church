@@ -14,4 +14,11 @@ describe('HomeComponent', () => {
     const fixture = TestBed.createComponent(HomeComponent);
     expect(fixture.componentInstance).toBeTruthy();
   });
+
+  it('should render the hero title', () => {
+    const fixture = TestBed.createComponent(HomeComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('h1')?.textContent).toContain('Activating Faith');
+  });
 });
