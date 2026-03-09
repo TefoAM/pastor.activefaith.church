@@ -1,77 +1,91 @@
-# Copilot Instructions — pastor.activefaith.church
+# Copilot Instructions - pastor.activefaith.church
 
-## Build, Test, and Lint
+Canonical workspace instructions for this repo. Keep this file as the primary source for AI-agent defaults.
 
-### From repo root
-```bash
-npm run install:all    # install both angular-app and api dependencies
-npm run build          # build frontend
-npm run test           # run frontend unit tests (Vitest)
-npm run test:api       # run API tests (Node test runner)
-npm run typecheck      # tsc --noEmit against angular-app
-npm run preflight      # typecheck + test + test:api + build (run before pushing)
-```
-
-### Frontend (`angular-app/`)
-```bash
-npm run test                        # run all unit tests
-npx vitest run src/app/contact      # run tests in a specific folder
-npx vitest run src/app/app.spec.ts  # run a single test file
-npm run e2e                         # Playwright e2e tests (Chromium)
-npm run e2e:headed                  # e2e with visible browser
-npm run typecheck                   # tsc --noEmit -p tsconfig.app.json
-```
-
-### API (`api/`)
-```bash
-npm run build && node --test dist/functions/api-handler.test.js  # run API tests
-npm run start                                                    # func start (local Azure Functions)
-```
-
-No linter is configured yet.
+## Code Style
+- Strict TypeScript across frontend and API. Do not introduce `any`.
+- Angular formatting follows `angular-app/package.json` Prettier config: single quotes, `printWidth: 100`.
+- Use 2-space indentation, UTF-8, trimmed trailing whitespace, and final newline.
+- Frontend feature folders are kebab-case under `angular-app/src/app/`.
 
 ## Architecture
+- Monorepo with two packages only:
+	- `angular-app/`: Angular 21 SSR frontend (zone.js runtime, Tailwind v4).
+	- `api/`: Azure Functions v4 (Node/TypeScript) served behind SWA at `/api/*`.
+- Main request flow:
+	- Frontend `ApiService` submits to `/api/submit`.
+	- `api/src/functions/api-handler.ts` validates with Zod and persists to Azure Table Storage.
+- Data store:
+	- Table: `PastorSubmissions`
+	- Partition key: `formType`
+	- Supported form types: `speakerInvite`, `contact`, `mediaKit`
+- Infrastructure lives in sibling repo `activefaith-infra` (`infra/app/pastor-*.tf`).
 
-Monorepo with two packages — no shared workspace tooling:
+## Build and Test
 
-- **`angular-app/`** — Angular 21 frontend with SSR, hosted on Azure Static Web Apps (Free tier). Tailwind CSS 4 for styling.
-- **`api/`** — Azure Functions v4 (Node 20, TypeScript) as SWA managed functions. Stateless — no sessions or in-memory state.
-- **Infrastructure** — Terraform in a separate repo (`activefaith-infra/infra/app/pastor-*.tf`). Same resource group (`rg-activefaith`) as activefaith.church but separate SWA and storage account (`stpastorafaith`).
+From repo root:
 
-### Data flow
-Frontend → `ApiService` → `/api/submit` (POST) → Zod validation + honeypot check → Azure Table Storage (`PastorSubmissions` table, partitionKey = formType).
+```bash
+npm run install:all   # installs angular-app and api dependencies
+npm run build         # builds frontend
+npm run test          # frontend Vitest suite
+npm run test:api      # API tests via node:test
+npm run typecheck     # frontend tsc --noEmit
+npm run preflight     # typecheck + test + test:api + build
+```
 
-Three form types: `speakerInvite`, `contact`, `mediaKit`.
+Frontend (`angular-app/`):
 
-### Key files
-- `api/src/functions/api-handler.ts` — Single API handler with Zod schemas for all three form types, honeypot detection, and Table Storage persistence.
-- `angular-app/src/app/app.routes.ts` — All routes with lazy-loaded components.
-- `angular-app/src/app/services/api.service.ts` — Frontend HTTP client for `/api/*`.
-- `angular-app/src/staticwebapp.config.json` — SWA routing config (SPA fallback, API exclusions).
+```bash
+npm run test
+npm run typecheck
+npm run e2e
+npm run e2e:headed
+```
+
+API (`api/`):
+
+```bash
+npm run build
+npm run test
+npm run start
+```
+
+Notes:
+- No real lint gate is configured (`lint` is a placeholder).
+- Quality gates are typecheck + tests + preflight.
 
 ## Conventions
 
-### Angular
-- Standalone components only (Angular 21 default — do NOT set `standalone: true`).
+### Angular conventions
+- Standalone components only (do not set `standalone: true`).
 - `ChangeDetectionStrategy.OnPush` on all components.
-- Signals for state, `computed()` for derived state.
-- `input()` / `output()` functions — not `@Input()` / `@Output()` decorators.
-- `inject()` function — not constructor injection.
-- Native control flow: `@if`, `@for`, `@switch` — not `*ngIf`, `*ngFor`.
-- Lazy-load all route components.
-- Kebab-case feature folders under `angular-app/src/app/`.
-- Tests co-located as `*.spec.ts` next to the component.
+- Use `inject()` for DI.
+- Use `input()` / `output()` functions, not `@Input()` / `@Output()` decorators.
+- Use signals (`signal`, `computed`) for local/derived state.
+- Use native control flow (`@if`, `@for`, `@switch`).
+- Lazy-load route components via `loadComponent()`.
+- Co-locate tests as `*.spec.ts`.
 
-### API
-- Zod for request validation.
-- Honeypot anti-spam on all form endpoints (no reCAPTCHA).
-- POPIA-compliant consent: distinguish transactional vs marketing consent.
-- Anonymous auth for `/api/submit`, function-level auth for `/api/submissions`.
+### API conventions
+- Keep `api/src/functions/api-handler.ts` as the submission contract source of truth.
+- Use Zod validation for all request payloads.
+- Preserve honeypot anti-spam checks on submissions.
+- Preserve POPIA consent semantics (transactional vs marketing consent).
 
-### Code style
-- Strict TypeScript; avoid `any`.
-- Single quotes, `printWidth: 100` (Prettier config in `angular-app/package.json`).
-- UTF-8, 2-space indentation, trim trailing whitespace, final newline.
+### Integration boundaries
+- Prefer extending `angular-app/src/app/services/api.service.ts` over ad hoc HTTP calls.
+- Keep changes scoped to one package unless cross-package coordination is required.
 
-### Scoping
-- Keep changes scoped to one package (`angular-app` or `api`) when possible.
+## Pitfalls
+- This repo uses zone.js (not zoneless); do not apply zoneless-only patterns.
+- Local Functions development requires Azure Functions Core Tools (`func start`).
+- There is no CI/CD pipeline yet; deployments are manual via SWA workflow.
+- Use only approved pastor assets under `angular-app/public/assets/pastor/`.
+
+## Key Files
+- `angular-app/src/app/app.routes.ts` (route topology and lazy loading)
+- `angular-app/src/app/services/api.service.ts` (frontend API integration)
+- `api/src/functions/api-handler.ts` (validation, anti-spam, persistence)
+- `api/src/functions/ping.ts` (health endpoint pattern)
+- `angular-app/src/staticwebapp.config.json` (routing/auth behavior)
