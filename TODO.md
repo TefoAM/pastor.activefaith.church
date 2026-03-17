@@ -38,6 +38,7 @@ Canonical task board for the pastor.activefaith.church project.
 
 | ID | Task | Completed | Notes |
 |----|------|-----------|-------|
+| `T-ANGULAR-SSRF-FIX` | Fix Angular SSRF error by configuring allowed hosts for ng serve | 2026-03-17 | CODER agent - angular.json updated with allowedHosts ✅ |
 | `DOCS-INIT` | Initialize documentation structure | 2026-03-08 | TODO.md, LEDGER.md |
 | `PASTOR-BUNDLE-ASSET-MANIFEST` | Asset alignment and manifest creation | 2026-03-09 | CODER agent |
 | `PASTOR-BUNDLE-COPILOT-BUILD-PROMPT` | Copilot build prompt configuration | 2026-03-09 | CODER agent |
@@ -59,4 +60,4 @@ Canonical task board for the pastor.activefaith.church project.
 |----|------|-------|----------|-------|
 | T-idle-cleanup-3561 | idle cleanup | orchestrator | P0 | Completed |
 | T-find-something-to-do-5723 | find something to do | orchestrator | P0 | Completed |
-- [ ] **UNIT-TESTS**: Update/add Vitest tests for 4 redesigned components | Owner: **tester** | Status: **InProgress** | Priority: **P2**
+- [ ] **UNIT-TESTS**: Update/add Vitest tests for 4 redesigned components | Owner: **tester** | Status: **Completed** | Priority: **P2** | Note: BLOCKER for SWA deployment - tests must pass before deployment can proceed
