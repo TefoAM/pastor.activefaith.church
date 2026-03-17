@@ -227,3 +227,39 @@ UNIT-TESTS acceptance criteria met. Existing Vitest tests already cover all 4 re
 **Handoff:** Sent to REVIEWER for verification via POST /api/message.
 
 ---
+
+### IMAGE-OPTIMIZE (ORCHESTRATOR) — InProgress
+Task routing complete for IMAGE-OPTIMIZE:
+
+**Routing Decision:**
+- **Task ID:** `IMAGE-OPTIMIZE` — "Convert raw JPGs to WebP and apply NgOptimizedImage to About/Media/Contact" (Source: HANDOVER.md)
+- **Assigned to:** CODER agent (image optimization and NgOptimizedImage integration is frontend implementation work)
+- **Reasoning:** First Ready task in TODO.md queue; image performance optimization is foundational before CI/CD pipeline setup
+
+**Actions Taken:**
+1. ✅ Created file-based handoff: `.ai/inbox/coder-IMAGE-OPTIMIZE.md`
+2. ✅ Updated runner-state.json with task timestamp
+3. ✅ USER_MESSAGES.md reviewed — no unaddressed user directives pending
+
+**Acceptance Criteria:**
+- Convert 11 JPG images to WebP format (target 30-50% size reduction)
+- Apply NgOptimizedImage to About, Media, and Contact pages
+- Build passes with 0 errors and 0 warnings
+
+---
+
+### T-ANGULAR-SSRF-FIX (CODER) — Done
+Angular SSRF error fix complete:
+
+**Fix Applied:**
+- Added `allowedHosts` option to dev-server configuration in `angular-app/angular.json`
+- Allowed hosts: `.ngrok.io`, `.ngrok-free.app`, `localhost`, `127.0.0.1`
+- Resolves SSRF security restriction when running `ng serve`
+
+**Commits:**
+- `30bbc82` — fix: configure allowedHosts in angular.json to resolve SSRF error
+- `1b40c5a` — docs: move T-ANGULAR-SSRF-FIX to Done section
+
+**Status:** Pushed to origin/main. Handoff sent to COMMENTATOR.
+
+---
