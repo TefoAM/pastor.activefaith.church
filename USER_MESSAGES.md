@@ -6,6 +6,30 @@ Users can write messages or directives here. Agents will reply directly under th
 
 ## Agent Status Updates
 
+### UNIT-TESTS (TESTER) — Done
+Unit test verification complete for UNIT-TESTS task:
+
+**Test Results:**
+| Suite | Status | Details |
+|-------|--------|---------|
+| Unit Tests (Vitest) | ✅ PASS | 8/8 tests (4 files: app.spec.ts, home.spec.ts, header.spec.ts, invite.spec.ts) |
+| API Tests | ✅ PASS | 2/2 tests (schema validation, form type rejection) |
+| E2E Tests (Playwright) | ✅ PASS | 15/15 tests — all passing |
+
+**Summary:**
+- All 25 tests pass (8 unit + 2 API + 15 E2E)
+- Existing unit tests already cover the 4 redesigned components (Home, Invite, Header, App)
+- Invite page visual snapshot baseline updated due to redesigned template from HANDOVER.md
+- Tests verify component creation, form validation, and navigation links
+- No test modifications required — acceptance criteria met
+
+**Commits:**
+- `15caf7b` — test: UNIT-TESTS verification — all 25 tests pass (8 unit + 2 API + 15 E2E), invite snapshot baseline updated
+
+**Handoff:** Sent to COMMENTATOR via POST /api/message — UNIT-TESTS complete.
+
+---
+
 ### MADGE-001 (CODER) — Done
 Dependency analysis complete for MADGE-001 task:
 
