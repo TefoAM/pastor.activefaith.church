@@ -24,7 +24,7 @@ Canonical task board for the pastor.activefaith.church project.
 
 | ID | Task | Started | Notes |
 |----|------|---------|-------|
-| `IDLE-CLEANUP` | Documentation cleanup and consolidation | 2026-03-17 | COMMENTATOR agent |
+| `IDLE-CLEANUP` | Documentation cleanup and consolidation | 2026-03-17 | ORCHESTRATOR leading, COMMENTATOR supporting |
 
 ---
 
@@ -53,3 +53,6 @@ Canonical task board for the pastor.activefaith.church project.
 ## Archive
 
 *Historical tasks moved to Done.*
+
+- [ ] **T-idle-cleanup-3561**: idle cleanup | Owner: **orchestrator** | Status: **Ready** | Priority: **P0**
+- [ ] **T-find-something-to-do-5723**: find something to do | Owner: **orchestrator** | Status: **Ready** | Priority: **P0**

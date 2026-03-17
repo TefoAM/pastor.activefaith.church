@@ -80,3 +80,79 @@ SELF-IMPROVEMENT PROPOSAL: Add a task priority field or ordering mechanism to TO
     **STAKEHOLDER REPORT:** Completed GIT-INIT task workflow. Git repository already initialized with passing tests (verified by TESTER agent). Committed orchestrator log changes (commit `e3da1cb`), pushed to origin/main. Sent handoff to COMMENTATOR agent for code review.
     **PEER FEEDBACK:** Grade 4/5 for COMMENTATOR. Improvement: Provide more structured code review output with specific line references when suggesting changes. No new agents to add/drop at this time.
     **SELF-IMPROVEMENT PROPOSAL:** Add automatic git status check at ORCHESTRATOR startup to detect and commit any pending changes before routing new tasks, preventing log file drift between agent handoffs.
+
+
+--- SPAWNING ORCHESTRATOR FOR TASK T-idle-cleanup-3561 ---
+    The API at `http://localhost:3124` appears to be the Azure Functions API for form submissions (submit, submissions endpoints), not the task orchestration API. The task/todo endpoints (`/api/task/assign`, `/api/todo/:id`) don't exist in this codebase.
+    Looking at the TODO.md structure and the agent OS logs, the task routing appears to be file-based (updating TODO.md directly) rather than API-driven.
+    **STAKEHOLDER REPORT:** No Ready tasks can be routed via API — the localhost:3124 API only handles form submissions (submit/submissions endpoints), not task orchestration; task `T-idle-cleanup-3561` remains in Ready state pending a working task assignment API.
+    **PEER FEEDBACK:** Grade 2/5 for REVIEWER — The API contract for task orchestration was assumed but never implemented or documented; need to either build the task API or update the workflow to use file-based task routing.
+    **SELF-IMPROVEMENT PROPOSAL:** Before attempting task assignment, ORCHESTRATOR should verify the task API exists by checking available routes; if unavailable, fall back to file-based routing (updating TODO.md directly with status/owner changes) and notify agents via handoff messages in USER_MESSAGES.md.
+
+
+--- SPAWNING ORCHESTRATOR FOR TASK IDLE-ROUTING ---
+    Operation cancelled.
+
+
+--- SPAWNING ORCHESTRATOR FOR TASK IDLE-ROUTING ---
+    Based on my analysis:
+    **STAKEHOLDER REPORT:** The task orchestration API at `http://localhost:3124/api/task/assign` does not exist — this endpoint was never implemented; the API only handles form submissions (submit/submissions), not task routing. TODO.md has 2 Ready tasks (`T-idle-cleanup-3561`, `T-find-something-to-do-5723`) but no working API to assign them.
+    **PEER FEEDBACK:** Grade 2/5 for SYSTEM ARCHITECT — The task orchestration API contract was specified in the workflow but never implemented; need to either build the missing API endpoints or update the workflow to use file-based task routing via TODO.md edits.
+    **SELF-IMPROVEMENT PROPOSAL:** Before attempting task assignment, ORCHESTRATOR should verify the task API exists by checking available routes; if unavailable, fall back to file-based routing (updating TODO.md directly with status/owner changes) and notify agents via handoff messages in USER_MESSAGES.md.
+    ---
+    **Summary:** Backlog has 2 Ready tasks but **no working task assignment API exists**. The workflow described assumes endpoints that were never built. Recommend either:
+    1. Implement the missing task API (`POST /api/task/assign`, `PATCH /api/todo/:id`)
+    2. Or switch to file-based routing where ORCHESTRATOR edits TODO.md directly
+
+
+--- SPAWNING ORCHESTRATOR FOR TASK IDLE-ROUTING ---
+    The task orchestration API at `http://localhost:3124` is not running. This is a conceptual agent workflow where tasks are routed via git commits and agent handoffs, not a live HTTP service. The TODO.md shows the task board, and agents coordinate through commits/messages in USER_MESSAGES.md.
+    **STAKEHOLDER REPORT:** Task `VISUAL-VERIFY` (highest-priority Ready task) identified for TESTER agent routing, but API at localhost:3124 is not running—task board is file-based (TODO.md), not HTTP-backed.
+    **PEER FEEDBACK:** 3/5 — The orchestration design assumes a running task API that doesn't exist; improve by documenting the actual handoff mechanism (git commits + USER_MESSAGES.md updates) as the canonical routing path.
+    **SELF-IMPROVEMENT PROPOSAL:** Before attempting HTTP task assignment, verify if the orchestration API is running; if not, fall back to file-based routing (update TODO.md status, log handoff in USER_MESSAGES.md, notify agent via commit message).
+
+
+--- SPAWNING ORCHESTRATOR FOR TASK IDLE-ROUTING ---
+    Now I have full context. The task orchestration API **does not exist** - this is a file-based agent workflow where:
+    - Tasks are tracked in TODO.md
+    - Agents coordinate through git commits and USER_MESSAGES.md handoffs
+    - The API at localhost:3124 is only for form submissions (Azure Functions), not task routing
+    Based on the TODO.md, the highest-priority "Ready" task is **`PASTOR-BUNDLE-MASTER-PLAN`** (first item in the Ready list).
+    Since there's no task API, I cannot POST/ PATCH to the endpoints specified. The actual workflow is file-based. However, the user's instructions explicitly state to use those API endpoints. Since the API doesn't exist, I should report this and exit without making changes.
+    **STAKEHOLDER REPORT:** Backlog has 7 Ready tasks (PASTOR-BUNDLE-MASTER-PLAN, PASTOR-BUNDLE-PRD, VISUAL-VERIFY, E2E-TESTS, UNIT-TESTS, IMAGE-OPTIMIZE, CI-CD-PIPELINE) but the task orchestration API at http://localhost:3124 does not exist—endpoints POST /api/task/assign and PATCH /api/todo/<id> were never implemented; only form submission endpoints exist.
+    **PEER FEEDBACK:** Grade 2/5 for SYSTEM ARCHITECT — The orchestration workflow specifies API endpoints that don't exist; improve by either implementing the task API or documenting the actual file-based routing mechanism (TODO.md edits + USER_MESSAGES.md handoffs) as the canonical path.
+    **SELF-IMPROVEMENT PROPOSAL:** Before attempting HTTP task assignment, ORCHESTRATOR should verify the task API is running by checking available routes; if unavailable, fall back to file-based routing (update TODO.md status/owner, log handoff in USER_MESSAGES.md) and notify agents via git commit messages.
+
+
+--- SPAWNING ORCHESTRATOR FOR TASK IDLE-ROUTING ---
+    Based on my analysis of the logs and TODO.md:
+    **STAKEHOLDER REPORT:** The task orchestration API at `http://localhost:3124/api/task/assign` and `/api/todo/<id>` endpoints do not exist — the API only handles form submissions (submit/submissions); TODO.md has 7 Ready tasks (PASTOR-BUNDLE-MASTER-PLAN, PASTOR-BUNDLE-PRD, VISUAL-VERIFY, E2E-TESTS, UNIT-TESTS, IMAGE-OPTIMIZE, CI-CD-PIPELINE) but no working API to assign them.
+    **PEER FEEDBACK:** Grade 2/5 for SYSTEM ARCHITECT — The orchestration workflow specifies API endpoints (`POST /api/task/assign`, `PATCH /api/todo/:id`) that were never implemented; improve by either building the task API or documenting the actual file-based routing mechanism (TODO.md edits + USER_MESSAGES.md handoffs) as the canonical path.
+    **SELF-IMPROVEMENT PROPOSAL:** Before attempting HTTP task assignment, ORCHESTRATOR should verify the task API is running by checking available routes; if unavailable, fall back to file-based routing (update TODO.md status/owner, log handoff in USER_MESSAGES.md) and notify agents via git commit messages.
+
+
+--- SPAWNING ORCHESTRATOR FOR TASK IDLE-ROUTING ---
+    Based on my analysis, the API at `http://localhost:3124` is an Azure Functions API for **form submissions only** (submit/submissions endpoints). The task orchestration API endpoints (`POST /api/task/assign`, `PATCH /api/todo/:id`) **do not exist** in this codebase.
+    The actual workflow uses **file-based routing** via TODO.md and USER_MESSAGES.md handoffs, not API calls.
+    ---
+    **STAKEHOLDER REPORT:** The backlog has 7 Ready tasks (PASTOR-BUNDLE-MASTER-PLAN, PASTOR-BUNDLE-PRD, VISUAL-VERIFY, E2E-TESTS, UNIT-TESTS, IMAGE-OPTIMIZE, CI-CD-PIPELINE) but the task orchestration API at `http://localhost:3124/api/task/assign` and `/api/todo/<id>` endpoints do not exist—the API only handles form submissions, not task routing.
+    **PEER FEEDBACK:** Grade 2/5 for SYSTEM ARCHITECT — The orchestration workflow specifies API endpoints (`POST /api/task/assign`, `PATCH /api/todo/<id>`) that were never implemented; improve by either building the task API or documenting the actual file-based routing mechanism (TODO.md edits + USER_MESSAGES.md handoffs) as the canonical path.
+    **SELF-IMPROVEMENT PROPOSAL:** Before attempting API calls, verify endpoint existence by reading the API source code first or maintain an API spec document that lists available endpoints to prevent wasted routing attempts.
+
+
+--- SPAWNING ORCHESTRATOR FOR TASK IDLE-ROUTING ---
+    The inbox files are empty. Based on my analysis:
+    **STAKEHOLDER REPORT:** Backlog has 7 Ready tasks (PASTOR-BUNDLE-MASTER-PLAN, PASTOR-BUNDLE-PRD, VISUAL-VERIFY, E2E-TESTS, UNIT-TESTS, IMAGE-OPTIMIZE, CI-CD-PIPELINE) but the task orchestration API at `http://localhost:3124/api/task/assign` and `/api/todo/<id>` endpoints **do not exist** — the API only handles form submissions (submit/submissions), not task routing; task assignment must be done via file-based handoffs (inbox files + runner-state.json updates).
+    **PEER FEEDBACK:** Grade 2/5 for SYSTEM ARCHITECT — The orchestration workflow specifies API endpoints (`POST /api/task/assign`, `PATCH /api/todo/:id`) that were never implemented; improve by either building the task API or documenting the actual file-based routing mechanism (TODO.md edits + USER_MESSAGES.md handoffs) as the canonical path.
+    **SELF-IMPROVEMENT PROPOSAL:** The orchestrator should detect API absence early and fall back to file-based routing (writing to `.ai/inbox/<role>.md` and updating `.ai/runner-state.json`) instead of attempting failed API calls.
+
+
+--- SPAWNING ORCHESTRATOR FOR TASK IDLE-ROUTING ---
+    Based on my analysis:
+    **The task orchestration API at `http://localhost:3124/api/task/assign` and `/api/todo/<id>` does NOT exist.** The API only handles form submissions (submit/submissions endpoints). The logs confirm this is a known gap.
+    The file-based routing mechanism is the actual workflow:
+    - `.ai/inbox/<role>.md` — handoff messages to agents
+    - `.ai/runner-state.json` — tracks last activity timestamp per role
+    **STAKEHOLDER REPORT:** Backlog has 7 Ready tasks (PASTOR-BUNDLE-MASTER-PLAN, PASTOR-BUNDLE-PRD, VISUAL-VERIFY, E2E-TESTS, UNIT-TESTS, IMAGE-OPTIMIZE, CI-CD-PIPELINE) but the task orchestration API endpoints do not exist — task assignment must use file-based handoffs via `.ai/inbox/` files and `runner-state.json` updates.
+    **PEER FEEDBACK:** Grade 2/5 for SYSTEM ARCHITECT — The orchestration workflow specifies API endpoints (`POST /api/task/assign`, `PATCH /api/todo/:id`) that were never implemented; improve by either building the task API or documenting the file-based routing mechanism as the canonical path.
+    **SELF-IMPROVEMENT PROPOSAL:** Before attempting HTTP task assignment, ORCHESTRATOR should verify the task API exists by checking available routes; if unavailable, fall back to file-based routing (update TODO.md status/owner, write handoff to `.ai/inbox/<role>.md`, update `runner-state.json` timestamp).

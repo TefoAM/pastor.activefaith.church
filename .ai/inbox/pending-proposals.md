@@ -47,3 +47,80 @@ task: GIT-INIT
 ---
 ** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
 
+---
+timestamp: 2026-03-17T16:37:19.890Z
+from: tester
+task: GIT-INIT
+---
+** Add `npm run test:ci` script that runs `playwright install-deps` before E2E tests to prevent missing library errors in fresh environments.
+
+---
+timestamp: 2026-03-17T16:37:22.927Z
+from: commentator
+task: GIT-INIT
+---
+** Add a pre-commit validation script that checks for duplicate entries in `pending-proposals.md` and validates TODO.md ledger schema consistency before allowing commits, preventing the documentation drift flagged during this session.
+
+---
+timestamp: 2026-03-17T17:46:23.466Z
+from: orchestrator
+task: T-idle-cleanup-3561
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+
+---
+timestamp: 2026-03-17T18:11:17.558Z
+from: orchestrator
+task: IDLE-ROUTING
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+
+---
+timestamp: 2026-03-17T18:12:29.347Z
+from: orchestrator
+task: IDLE-ROUTING
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+
+---
+timestamp: 2026-03-17T18:13:09.383Z
+from: orchestrator
+task: IDLE-ROUTING
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+
+---
+timestamp: 2026-03-17T18:14:03.798Z
+from: orchestrator
+task: IDLE-ROUTING
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+
+---
+timestamp: 2026-03-17T18:14:58.357Z
+from: orchestrator
+task: IDLE-ROUTING
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+
+---
+timestamp: 2026-03-17T18:16:40.528Z
+from: orchestrator
+task: IDLE-ROUTING
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+
+---
+timestamp: 2026-03-17T18:17:50.456Z
+from: orchestrator
+task: IDLE-ROUTING
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+
+---
+timestamp: 2026-03-17T18:18:44.219Z
+from: coder
+task: T-merge-todo-files-8842
+---
+** Add a pre-commit validation script that checks for duplicate entries in pending-proposals.md and validates TODO.md ledger schema consistency before allowing commits, preventing the drift that COMMENTATOR agent flagged.
+
