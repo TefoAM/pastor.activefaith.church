@@ -411,6 +411,41 @@
         "actionCount": 0,
         "peerGrade": null,
         "model": null
+      },
+      {
+        "role": "reviewer",
+        "timestamp": "2026-03-17T19:06:02.949Z",
+        "executionTimeSeconds": 154,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": null,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T19:08:18.867Z",
+        "executionTimeSeconds": 170,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 3,
+        "model": null
+      }
+    ]
+  },
+  {
+    "taskId": "T-ANGULAR-SSRF-FIX",
+    "handoffCount": 2,
+    "firstSeenAt": "2026-03-17T19:28:31.712Z",
+    "completedAt": null,
+    "agentRuns": [
+      {
+        "role": "coder",
+        "timestamp": "2026-03-17T19:32:02.001Z",
+        "executionTimeSeconds": 183,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 4,
+        "model": null
       }
     ]
   }

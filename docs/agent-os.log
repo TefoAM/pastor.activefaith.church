@@ -143,3 +143,11 @@ Structured log of agent sessions. For human-readable summaries, see `activity-lo
 [2026-03-17T19:04:40.964Z] ✅ [COMMENTATOR] Task UNIT-TESTS session ended successfully.
 [2026-03-17T19:04:40.967Z] 📥 Stored proposal for later governance (commentator UNIT-TESTS).
 [2026-03-17T19:05:29.148Z] 🚀 [AUTONOMOUS] Spawning ORCHESTRATOR for Task UNIT-TESTS using brand qwen (Attempt 1)
+[2026-03-17T19:06:02.947Z] ✅ [REVIEWER] Task UNIT-TESTS session ended successfully.
+[2026-03-17T19:06:02.949Z] 📥 Stored proposal for later governance (reviewer UNIT-TESTS).
+[2026-03-17T19:08:18.865Z] ✅ [ORCHESTRATOR] Task UNIT-TESTS session ended successfully.
+[2026-03-17T19:08:18.868Z] 📥 Stored proposal for later governance (orchestrator UNIT-TESTS).
+[2026-03-17T19:28:59.304Z] 🚀 [AUTONOMOUS] Spawning CODER for Task T-ANGULAR-SSRF-FIX using brand qwen (Attempt 1)
+[2026-03-17T19:31:29.322Z] 🚀 [AUTONOMOUS] Spawning COMMENTATOR for Task T-ANGULAR-SSRF-FIX using brand qwen (Attempt 1)
+[2026-03-17T19:32:01.988Z] ✅ [CODER] Task T-ANGULAR-SSRF-FIX session ended successfully.
+[2026-03-17T19:32:02.016Z] 📥 Stored proposal for later governance (coder T-ANGULAR-SSRF-FIX).

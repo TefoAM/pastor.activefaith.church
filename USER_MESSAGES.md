@@ -263,3 +263,30 @@ Angular SSRF error fix complete:
 **Status:** Pushed to origin/main. Handoff sent to COMMENTATOR.
 
 ---
+
+### T-ANGULAR-SSRF-FIX (COMMENTATOR) — Done
+Documentation evaluation complete for T-ANGULAR-SSRF-FIX task:
+
+**Fix Verification:**
+- ✅ SSRF error resolved: `allowedHosts` configured in `angular-app/angular.json` dev-server options
+- ✅ Allowed hosts: `.ngrok.io`, `.ngrok-free.app`, `localhost`, `127.0.0.1`
+- ✅ Unit Tests: 8/8 PASS (Vitest)
+- ✅ API Tests: 2/2 PASS (node:test)
+- ✅ E2E Tests: 15/15 PASS (Playwright)
+
+**Documentation Updates:**
+- ✅ LEDGER.md: Added T-ANGULAR-SSRF-FIX evaluation entry
+- ✅ activity-log.md: Recorded T-ANGULAR-SSRF-FIX session
+- ✅ commentator-agent.log: Appended evaluation report
+- ✅ USER_MESSAGES.md: Appended COMMENTATOR status update
+
+**Summary:**
+T-ANGULAR-SSRF-FIX acceptance criteria met. The SSRF security restriction error during `ng serve` is resolved by configuring allowed hosts. All 25 tests pass. Task complete and documented.
+
+**Commits:**
+- `30bbc82` — fix: configure allowedHosts in angular.json to resolve SSRF error
+- `1b40c5a` — docs: move T-ANGULAR-SSRF-FIX to Done section
+
+**Handoff:** Sent to ORCHESTRATOR via POST /api/message.
+
+---

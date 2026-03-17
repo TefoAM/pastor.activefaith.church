@@ -13,6 +13,7 @@ Single source of truth for every material Markdown change (creation or edit).
 
 | Date       | Paths                            | Type   | Summary                                                        | Author                     | Commit/PR |
 |------------|----------------------------------|--------|----------------------------------------------------------------|----------------------------|-----------|
+| 2026-03-17 | USER_MESSAGES.md, docs/LEDGER.md | major  | T-ANGULAR-SSRF-FIX evaluation: SSRF error resolved via allowedHosts config, all 25 tests pass | COMMENTATOR                | TBD       |
 | 2026-03-17 | USER_MESSAGES.md                 | major  | UNIT-TESTS evaluation: 8/8 Vitest + 2/2 API + 15/15 E2E pass  | COMMENTATOR                | 6b902cd   |
 | 2026-03-17 | USER_MESSAGES.md, docs/LEDGER.md | major  | E2E-TESTS evaluation: 15/15 Playwright tests pass, docs updated | COMMENTATOR                | 96f666e   |
 | 2026-03-17 | docs/activity-log.md             | major  | Systemic cleanup: date ordering, format consistency            | COMMENTATOR                | TBD       |

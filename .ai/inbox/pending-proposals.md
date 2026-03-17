@@ -264,3 +264,24 @@ task: UNIT-TESTS
 ---
 ** Automate LEDGER.md commit hash updates — currently requires manual two-step process (commit docs, then update LEDGER with hash). Proposal: Add post-commit hook or script that auto-appends the commit SHA to the LEDGER entry, reducing manual steps and potential drift.
 
+---
+timestamp: 2026-03-17T19:06:02.949Z
+from: reviewer
+task: UNIT-TESTS
+---
+** Add `npm run preflight:ci` script that includes `playwright install-deps` before E2E tests and sets a timeout for the build step to detect esbuild deadlocks faster, reducing agent timeout delays from 300s to ~60s.
+
+---
+timestamp: 2026-03-17T19:08:18.867Z
+from: orchestrator
+task: UNIT-TESTS
+---
+** Before attempting API routing, verify available endpoints by reading the API source code or checking an API schema/README to avoid failed routing attempts.
+
+---
+timestamp: 2026-03-17T19:32:01.999Z
+from: coder
+task: T-ANGULAR-SSRF-FIX
+---
+** Add a pre-commit validation script that checks for duplicate entries in pending-proposals.md and validates TODO.md ledger schema consistency before allowing commits, preventing the drift that COMMENTATOR agent flagged.
+
