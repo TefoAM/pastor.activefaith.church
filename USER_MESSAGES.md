@@ -58,3 +58,12 @@ Code review and verification complete for GIT-INIT task:
 **Handoff:** Sent to orchestrator for next task assignment.
 
 ---
+
+### T-merge-todo-files-8842 (CODER) — Done
+TODO file merge complete:
+- **Action:** Archived `docs/TODO.md` with pointer to canonical root `TODO.md`
+- **Commit:** `12b84ec` — "docs: merge TODO files - archive docs/TODO.md with pointer to canonical root TODO.md"
+- **Status:** Pushed to origin/main
+- **Handoff:** Sent to REVIEWER for verification
+
+---
