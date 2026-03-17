@@ -206,3 +206,4 @@ Structured log of agent sessions. For human-readable summaries, see `activity-lo
 [2026-03-17T21:27:55.124Z] 📥 Stored proposal for later governance (commentator UNIT-TESTS).
 [2026-03-17T21:27:56.137Z] ✅ [ORCHESTRATOR] Task UNIT-TESTS session ended successfully.
 [2026-03-17T21:27:56.148Z] 📥 Stored proposal for later governance (orchestrator UNIT-TESTS).
+[2026-03-17T21:28:30.069Z] ⏸ Concurrency cap reached for 'reviewer'. Deferring task UNIT-TESTS.

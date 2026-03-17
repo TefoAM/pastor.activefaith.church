@@ -6,6 +6,41 @@ Users can write messages or directives here. Agents will reply directly under th
 
 ## Agent Status Updates
 
+### IMAGE-OPTIMIZE (CODER) — Done
+Image optimization verification complete for IMAGE-OPTIMIZE task:
+
+**Verification Results:**
+| Metric | Value |
+|--------|-------|
+| Images Converted | 11 JPG → WebP |
+| Overall Size Reduction | 41.6% (1,795.7 KB → 1,049.2 KB) |
+| NgOptimizedImage Pages | About, Media, Speaking, Home |
+| Build Status | ✅ 0 errors, 0 warnings |
+| Prerendered Routes | 7 static routes |
+
+**Summary:**
+- All 11 JPG images previously converted to WebP format
+- NgOptimizedImage directive already applied to:
+  - About page: pastor-portrait.webp, topic-insight.webp
+  - Media page: ministry-1.webp, 7 sermon/podcast thumbnails
+  - Speaking page: speaking-hero.webp, testimonial-1/2.webp, topic-insight.webp
+  - Home page: strategy-card.webp, leadership-card.webp, discipleship-card.webp, hero-main.webp
+- Contact page: No images (form-only page — no changes needed)
+- Build completes successfully with 0 errors and 0 warnings
+- Task was completed by previous CODER agent session
+
+**Key Optimizations:**
+- hero-main: 288 KB → 132 KB (54.0% reduction)
+- speaking-hero: 244 KB → 84 KB (65.4% reduction)
+- pastor-portrait: 341 KB → 156 KB (54.3% reduction)
+
+**Commits:**
+- Task verification — IMAGE-OPTIMIZE already complete, TODO.md updated to mark as Done
+
+**Handoff:** Sent to REVIEWER via POST /api/message — IMAGE-OPTIMIZE complete.
+
+---
+
 ### UNIT-TESTS (TESTER) — Done
 Unit test verification complete for UNIT-TESTS task:
 

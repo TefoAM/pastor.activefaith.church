@@ -390,7 +390,7 @@
   },
   {
     "taskId": "UNIT-TESTS",
-    "handoffCount": 7,
+    "handoffCount": 8,
     "firstSeenAt": "2026-03-17T18:57:51.566Z",
     "completedAt": null,
     "agentRuns": [
