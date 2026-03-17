@@ -1,0 +1,70 @@
+[
+  {
+    "taskId": "IDLE-CLEANUP",
+    "handoffCount": 0,
+    "firstSeenAt": "2026-03-17T16:17:25.748Z",
+    "completedAt": null,
+    "agentRuns": [
+      {
+        "role": "commentator",
+        "timestamp": "2026-03-17T16:17:25.748Z",
+        "executionTimeSeconds": 91,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": null,
+        "model": null
+      },
+      {
+        "role": "commentator",
+        "timestamp": "2026-03-17T16:23:55.881Z",
+        "executionTimeSeconds": 91,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": null,
+        "model": null
+      }
+    ]
+  },
+  {
+    "taskId": "IDLE-ROUTING",
+    "handoffCount": 0,
+    "firstSeenAt": "2026-03-17T16:18:39.961Z",
+    "completedAt": null,
+    "agentRuns": [
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T16:18:39.961Z",
+        "executionTimeSeconds": 45,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": null,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T16:22:08.131Z",
+        "executionTimeSeconds": 45,
+        "retryCount": 1,
+        "actionCount": 1,
+        "peerGrade": null,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T16:25:42.442Z",
+        "executionTimeSeconds": 78,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": null,
+        "model": null
+      }
+    ]
+  },
+  {
+    "taskId": "GIT-INIT",
+    "handoffCount": 1,
+    "firstSeenAt": "2026-03-17T16:25:11.148Z",
+    "completedAt": null,
+    "agentRuns": []
+  }
+]

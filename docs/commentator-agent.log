@@ -1,0 +1,27 @@
+# Commentator Agent Log
+
+## Session History
+
+### 2026-03-17 — IDLE-CLEANUP
+
+| Attempt | Agent  | Status      | Notes                              |
+|---------|--------|-------------|------------------------------------|
+| 1       | gemini | ❌ Failed   | spawn gemini ENOENT                |
+| 2       | gemini | ❌ Failed   | spawn gemini ENOENT                |
+| 3       | qwen   | ✅ Complete | Session ended successfully         |
+| 4       | qwen   | 🔄 Progress | Current session (this cleanup)     |
+
+**Session 3 Summary (16:15:54 — 16:17:25):**
+- Documentation sprawl cleaned across 4 files
+- Activity log consolidated with structured table format
+- Agent OS log reformatted for readability
+- TODO.md streamlined with task sources tracked
+- Self-improvement proposal stored for governance
+
+---
+
+## Notes
+
+- **gemini agent unavailable** in this environment — all tasks use qwen
+- For system-level activity timestamps, see `docs/agent-os.log`
+    IDLE-CLEANUP complete. Exiting.

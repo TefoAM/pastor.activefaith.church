@@ -1,0 +1,23 @@
+{
+  "taskTypeRolePerformance": {
+    "GENERAL": {
+      "commentator": {
+        "totalRuns": 2,
+        "totalExecutionTime": 182,
+        "successfulRuns": 2,
+        "totalPeerGrade": 0,
+        "gradedRuns": 0,
+        "lastRunAt": "2026-03-17T16:23:55.881Z"
+      },
+      "orchestrator": {
+        "totalRuns": 3,
+        "totalExecutionTime": 168,
+        "successfulRuns": 2,
+        "totalPeerGrade": 0,
+        "gradedRuns": 0,
+        "lastRunAt": "2026-03-17T16:25:42.442Z"
+      }
+    }
+  },
+  "lastUpdated": "2026-03-17T16:25:42.443Z"
+}
