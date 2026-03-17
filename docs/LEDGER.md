@@ -13,6 +13,7 @@ Single source of truth for every material Markdown change (creation or edit).
 
 | Date       | Paths                            | Type   | Summary                                                        | Author                     | Commit/PR |
 |------------|----------------------------------|--------|----------------------------------------------------------------|----------------------------|-----------|
+| 2026-03-17 | USER_MESSAGES.md                 | major  | UNIT-TESTS evaluation: 8/8 Vitest + 2/2 API + 15/15 E2E pass  | COMMENTATOR                | TBD       |
 | 2026-03-17 | USER_MESSAGES.md, docs/LEDGER.md | major  | E2E-TESTS evaluation: 15/15 Playwright tests pass, docs updated | COMMENTATOR                | 96f666e   |
 | 2026-03-17 | docs/activity-log.md             | major  | Systemic cleanup: date ordering, format consistency            | COMMENTATOR                | TBD       |
 | 2026-03-17 | docs/agent-os.log                | major  | Consolidated verbose logs into structured tables               | COMMENTATOR                | TBD       |

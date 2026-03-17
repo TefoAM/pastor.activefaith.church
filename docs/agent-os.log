@@ -136,3 +136,7 @@ Structured log of agent sessions. For human-readable summaries, see `activity-lo
 [2026-03-17T18:57:59.099Z] 🚀 [AUTONOMOUS] Spawning TESTER for Task UNIT-TESTS using brand qwen (Attempt 1)
 [2026-03-17T18:58:11.899Z] ✅ [ORCHESTRATOR] Task IDLE-ROUTING session ended successfully.
 [2026-03-17T18:58:11.902Z] 📥 Stored proposal for later governance (orchestrator IDLE-ROUTING).
+[2026-03-17T19:01:29.124Z] 🚀 [AUTONOMOUS] Spawning COMMENTATOR for Task UNIT-TESTS using brand qwen (Attempt 1)
+[2026-03-17T19:01:30.298Z] ✅ [TESTER] Task UNIT-TESTS session ended successfully.
+[2026-03-17T19:01:30.302Z] 📥 Stored proposal for later governance (tester UNIT-TESTS).
+[2026-03-17T19:03:29.133Z] 🚀 [AUTONOMOUS] Spawning REVIEWER for Task UNIT-TESTS using brand qwen (Attempt 1)

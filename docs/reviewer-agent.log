@@ -12,3 +12,6 @@
     **STAKEHOLDER REPORT:** Completed T-merge-todo-files-8842 review. Verified TODO consolidation: `docs/TODO.md` archived with pointer to canonical root `TODO.md`, historical content preserved, unit tests pass (8/8). Committed and pushed 3 commits (`994213c`, `8a43715`, `1bdf0cb`). Handoff sent to ORCHESTRATOR via API.
     **PEER FEEDBACK:** TESTER — Grade: **4/5**. Improvement: The E2E flaky test (`page.goto: Page crashed` in `e2e/invite-form.spec.ts:31`) needs investigation—add page stability waits or retry logic in Playwright config. No agent additions/drops recommended.
     **SELF-IMPROVEMENT PROPOSAL:** Add automated pre-commit check to verify `pending-proposals.md` for duplicate entries (currently 13 duplicate orchestrator proposals for IDLE-ROUTING consolidation) and validate TODO.md ledger schema consistency before allowing commits, preventing the documentation drift that COMMENTATOR flagged.
+
+
+--- SPAWNING REVIEWER FOR TASK UNIT-TESTS ---

@@ -250,3 +250,10 @@ task: IDLE-ROUTING
 ---
 ** Before attempting API routing, verify available endpoints by reading the API source code or checking an API schema/README to avoid failed routing attempts.
 
+---
+timestamp: 2026-03-17T19:01:30.302Z
+from: tester
+task: UNIT-TESTS
+---
+** Add `npm run test:ci` script that runs `playwright install-deps` before E2E tests to prevent missing library errors in fresh environments.
+

@@ -390,9 +390,19 @@
   },
   {
     "taskId": "UNIT-TESTS",
-    "handoffCount": 1,
+    "handoffCount": 3,
     "firstSeenAt": "2026-03-17T18:57:51.566Z",
     "completedAt": null,
-    "agentRuns": []
+    "agentRuns": [
+      {
+        "role": "tester",
+        "timestamp": "2026-03-17T19:01:30.302Z",
+        "executionTimeSeconds": 211,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 4,
+        "model": null
+      }
+    ]
   }
 ]

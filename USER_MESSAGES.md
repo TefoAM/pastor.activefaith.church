@@ -171,3 +171,24 @@ Unit test verification complete for UNIT-TESTS task:
 - Pending — test: UNIT-TESTS verification — all 25 tests pass (8 unit + 2 API + 15 E2E)
 
 ---
+
+### UNIT-TESTS (COMMENTATOR) — Done
+Documentation evaluation complete for UNIT-TESTS task:
+
+**Test Verification:**
+- ✅ Unit Tests: 8/8 PASS (Vitest)
+- ✅ API Tests: 2/2 PASS (node:test)
+- ✅ E2E Tests: 15/15 PASS (Playwright)
+
+**Coverage Assessment:**
+- 4 component test files: `app.spec.ts`, `home.spec.ts`, `header.spec.ts`, `invite.spec.ts`
+- Tests verify component creation, form validation, and navigation links
+- All 4 redesigned components from HANDOVER.md covered (Home, Invite, Header, App)
+- Total: 25 tests passing (8 unit + 2 API + 15 E2E)
+
+**Summary:**
+UNIT-TESTS acceptance criteria met. Existing Vitest tests already cover all 4 redesigned components with appropriate specs for component creation and form validation. No test modifications required.
+
+**Handoff:** Sent to REVIEWER for verification via POST /api/message.
+
+---
