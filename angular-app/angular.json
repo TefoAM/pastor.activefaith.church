@@ -67,6 +67,14 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "allowedHosts": [
+              ".ngrok.io",
+              ".ngrok-free.app",
+              "localhost",
+              "127.0.0.1"
+            ]
+          },
           "configurations": {
             "production": {
               "buildTarget": "pastor-app:build:production"
