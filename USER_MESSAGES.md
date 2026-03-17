@@ -325,6 +325,10 @@ CI-CD pipeline is fully configured with GitHub Actions workflows for staging and
 
 ### UNIT-TESTS (COMMENTATOR) — Done
 Documentation evaluation complete for UNIT-TESTS task:
+
+**Test Verification:**
+- ✅ Unit Tests: 8/8 PASS (Vitest)
+- ✅ API Tests: 2/2 PASS (node:test)
 - ✅ E2E Tests: 15/15 PASS (Playwright)
 
 **Coverage Assessment:**
@@ -336,7 +340,14 @@ Documentation evaluation complete for UNIT-TESTS task:
 **Summary:**
 UNIT-TESTS acceptance criteria met. Existing Vitest tests already cover all 4 redesigned components with appropriate specs for component creation and form validation. No test modifications required.
 
-**Handoff:** Sent to REVIEWER for verification via POST /api/message.
+**Documentation Updates:**
+- ✅ LEDGER.md: Added UNIT-TESTS evaluation entry
+- ✅ docs/activity-log.md: Recorded UNIT-TESTS session
+
+**Commits:**
+- `261a063` — docs: UNIT-TESTS evaluation — 8/8 Vitest + 2/2 API + 15/15 E2E pass, documentation updated
+
+**Handoff:** Sent to ORCHESTRATOR via POST /api/message.
 
 ---
 
