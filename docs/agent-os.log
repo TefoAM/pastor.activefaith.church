@@ -121,3 +121,18 @@ Structured log of agent sessions. For human-readable summaries, see `activity-lo
 [2026-03-17T18:51:59.085Z] 🚀 [AUTONOMOUS] Spawning COMMENTATOR for Task E2E-TESTS using brand qwen (Attempt 1)
 [2026-03-17T18:52:57.238Z] ✅ [TESTER] Task E2E-TESTS session ended successfully.
 [2026-03-17T18:52:57.242Z] 📥 Stored proposal for later governance (tester E2E-TESTS).
+[2026-03-17T18:55:04.801Z] ✅ [COMMENTATOR] Task E2E-TESTS session ended successfully.
+[2026-03-17T18:55:04.804Z] 📥 Stored proposal for later governance (commentator E2E-TESTS).
+[2026-03-17T18:55:29.089Z] System Idle. Waking up Orchestrator.
+[2026-03-17T18:55:29.089Z] 🚀 [AUTONOMOUS] Spawning ORCHESTRATOR for Task IDLE-ROUTING using brand qwen (Attempt 1)
+[2026-03-17T18:56:17.797Z] ✅ [ORCHESTRATOR] Task IDLE-ROUTING session ended successfully.
+[2026-03-17T18:56:17.799Z] 📥 Stored proposal for later governance (orchestrator IDLE-ROUTING).
+[2026-03-17T18:56:29.095Z] System Idle. Waking up Orchestrator.
+[2026-03-17T18:56:29.095Z] 🚀 [AUTONOMOUS] Spawning ORCHESTRATOR for Task IDLE-ROUTING using brand qwen (Attempt 1)
+[2026-03-17T18:56:45.167Z] ✅ [ORCHESTRATOR] Task IDLE-ROUTING session ended successfully.
+[2026-03-17T18:56:45.169Z] 📥 Stored proposal for later governance (orchestrator IDLE-ROUTING).
+[2026-03-17T18:56:59.098Z] System Idle. Waking up Orchestrator.
+[2026-03-17T18:56:59.098Z] 🚀 [AUTONOMOUS] Spawning ORCHESTRATOR for Task IDLE-ROUTING using brand qwen (Attempt 1)
+[2026-03-17T18:57:59.099Z] 🚀 [AUTONOMOUS] Spawning TESTER for Task UNIT-TESTS using brand qwen (Attempt 1)
+[2026-03-17T18:58:11.899Z] ✅ [ORCHESTRATOR] Task IDLE-ROUTING session ended successfully.
+[2026-03-17T18:58:11.902Z] 📥 Stored proposal for later governance (orchestrator IDLE-ROUTING).

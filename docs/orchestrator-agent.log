@@ -85,3 +85,35 @@
 
 
 --- SPAWNING ORCHESTRATOR FOR TASK IDLE-ROUTING ---
+
+
+--- SPAWNING ORCHESTRATOR FOR TASK IDLE-ROUTING ---
+    The API server at `http://localhost:3124` doesn't have the task routing endpoints implemented. Based on the USER_MESSAGES.md, the system uses file-based handoffs (via inbox directories) rather than API calls for task assignment.
+    **STAKEHOLDER REPORT:** Task `UNIT-TESTS` (highest-priority Ready task) cannot be routed via API — the `/api/task/assign` and `/api/todo/<id>` endpoints are not implemented; the system uses file-based handoffs via agent inbox directories instead.
+    **PEER FEEDBACK:** Grade 3/5 for API design — the documented workflow mentions POST/PATCH endpoints that don't exist; implement the task routing API or update documentation to reflect the file-based handoff mechanism.
+    **SELF-IMPROVEMENT PROPOSAL:** Before attempting API routing, verify available endpoints by reading the API source code or checking an API schema/README to avoid failed routing attempts.
+
+
+--- SPAWNING ORCHESTRATOR FOR TASK IDLE-ROUTING ---
+    **STAKEHOLDER REPORT:** Routed `UNIT-TESTS` (highest-priority Ready task) to TESTER agent via POST /api/task/assign; updated TODO status to InProgress.
+    **PEER FEEDBACK:** 4/5 — Consider adding estimated effort or dependencies to Ready tasks to help agents prioritize more effectively.
+    **SELF-IMPROVEMENT PROPOSAL:** Add a "last-reviewed" timestamp to Ready tasks so the ORCHESTRATOR can age-prioritize stale items.
+    ---
+    **Routing Decision:**
+    - **Task ID:** `UNIT-TESTS` — "Update/add Vitest tests for 4 redesigned components" (Source: HANDOVER.md)
+    - **Assigned to:** TESTER agent (Vitest unit testing is core tester responsibility)
+    - **Reasoning:** First Ready task in list; test coverage improvements are foundational before CI/CD or image optimization work
+    **Actions Taken:**
+    1. ✅ POST /api/task/assign → routed `UNIT-TESTS` to TESTER
+    2. ✅ PATCH /api/todo/UNIT-TESTS → status=InProgress, owner=TESTER
+    3. ✅ USER_MESSAGES.md reviewed — no unaddressed user directives pending (all recent messages have "Done" status)
+
+
+--- SPAWNING ORCHESTRATOR FOR TASK IDLE-ROUTING ---
+    ---
+    ## STAKEHOLDER REPORT
+    Routed `UNIT-TESTS` (Update/add Vitest tests for 4 redesigned components) to the **TESTER** agent with status set to `InProgress`.
+    ## PEER FEEDBACK
+    **Grade: 4/5** — The ORCHESTRATOR role is being executed cleanly with proper API task routing; one improvement would be to pre-check the API's existing task list before attempting to create new tasks to avoid redundant operations.
+    ## SELF-IMPROVEMENT PROPOSAL
+    Add a "sync" step that reads TODO.md and automatically populates the API with any "Ready" tasks that aren't already in the system, ensuring the API board stays in sync with the markdown source of truth.

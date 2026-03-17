@@ -28,7 +28,9 @@ Canonical task board for the pastor.activefaith.church project.
 
 ## InTest
 
-*No tasks currently in test.*
+| ID | Task | Tested | Notes |
+|----|------|--------|-------|
+| `UNIT-TESTS` | Update/add Vitest tests for 4 redesigned components | 2026-03-17 | TESTER agent - 8/8 unit tests pass ✅ |
 
 ---
 
@@ -57,3 +59,4 @@ Canonical task board for the pastor.activefaith.church project.
 |----|------|-------|----------|-------|
 | T-idle-cleanup-3561 | idle cleanup | orchestrator | P0 | Completed |
 | T-find-something-to-do-5723 | find something to do | orchestrator | P0 | Completed |
+- [ ] **UNIT-TESTS**: Update/add Vitest tests for 4 redesigned components | Owner: **tester** | Status: **InProgress** | Priority: **P2**

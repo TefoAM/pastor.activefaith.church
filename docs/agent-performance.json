@@ -210,6 +210,33 @@
         "actionCount": 0,
         "peerGrade": 4,
         "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T18:56:17.799Z",
+        "executionTimeSeconds": 49,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 3,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T18:56:45.169Z",
+        "executionTimeSeconds": 16,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 3,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T18:58:11.901Z",
+        "executionTimeSeconds": 73,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 3,
+        "model": null
       }
     ]
   },
@@ -349,7 +376,23 @@
         "actionCount": 0,
         "peerGrade": 4,
         "model": null
+      },
+      {
+        "role": "commentator",
+        "timestamp": "2026-03-17T18:55:04.803Z",
+        "executionTimeSeconds": 186,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": null,
+        "model": null
       }
     ]
+  },
+  {
+    "taskId": "UNIT-TESTS",
+    "handoffCount": 1,
+    "firstSeenAt": "2026-03-17T18:57:51.566Z",
+    "completedAt": null,
+    "agentRuns": []
   }
 ]

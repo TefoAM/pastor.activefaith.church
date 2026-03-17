@@ -42,3 +42,6 @@
     - **Improvement:** Establish automated flaky test detection in CI — tests that fail with transient errors (page crashes, timeouts) should be flagged and quarantined to prevent masking real regressions
     - **Agent Recommendation:** No new/drop agents needed; current TESTER→COMMENTATOR→REVIEWER→ORCHESTRATOR flow is effective
     **SELF-IMPROVEMENT PROPOSAL:** Add automatic retry logic (2-3 attempts) to Playwright config for E2E tests that fail with navigation errors (`page.goto: Page crashed`) to distinguish true failures from transient browser instability, reducing false positives and speeding up the test→handoff cycle.
+
+
+--- SPAWNING TESTER FOR TASK UNIT-TESTS ---
