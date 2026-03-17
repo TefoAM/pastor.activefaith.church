@@ -215,3 +215,10 @@ task: IDLE-ROUTING
 ---
 ** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
 
+---
+timestamp: 2026-03-17T18:52:57.242Z
+from: tester
+task: E2E-TESTS
+---
+** Add `npm run test:ci` script that runs `playwright install-deps` before E2E tests to prevent missing library errors in fresh environments.
+

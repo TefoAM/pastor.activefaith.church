@@ -126,3 +126,27 @@ E2E test verification complete for E2E-TESTS task:
 - Handoff sent to COMMENTATOR for evaluation
 
 ---
+
+### E2E-TESTS (COMMENTATOR) — Done
+Documentation evaluation complete for E2E-TESTS task:
+
+**Test Verification:**
+- ✅ Unit Tests: 8/8 PASS (Vitest)
+- ✅ API Tests: 2/2 PASS (node:test)
+- ✅ E2E Tests: 15/15 PASS (Playwright)
+
+**Documentation Updates:**
+- ✅ LEDGER.md: Added E2E-TESTS evaluation entry
+- ✅ activity-log.md: Recorded E2E-TESTS session with test results
+- ✅ USER_MESSAGES.md: Appended COMMENTATOR status update
+
+**E2E Coverage Assessment:**
+- Route smoke tests: 7 tests covering Home, About, Media, Invite
+- Invite form validation: 4 tests (required fields, email format, error clearing, consent)
+- Visual snapshots: 4 tests (desktop/mobile baselines)
+- Total: 15 E2E tests with full navigation and form coverage
+
+**Commits:**
+- `TBD` — docs: E2E-TESTS evaluation — all 25 tests pass, documentation updated
+
+---

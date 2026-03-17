@@ -119,3 +119,5 @@ Structured log of agent sessions. For human-readable summaries, see `activity-lo
 [2026-03-17T18:48:55.285Z] 🚀 [AUTONOMOUS] Spawning COMMENTATOR for Task IDLE-CLEANUP using brand qwen (Attempt 2)
 [2026-03-17T18:49:59.055Z] 🚀 [AUTONOMOUS] Spawning TESTER for Task E2E-TESTS using brand qwen (Attempt 1)
 [2026-03-17T18:51:59.085Z] 🚀 [AUTONOMOUS] Spawning COMMENTATOR for Task E2E-TESTS using brand qwen (Attempt 1)
+[2026-03-17T18:52:57.238Z] ✅ [TESTER] Task E2E-TESTS session ended successfully.
+[2026-03-17T18:52:57.242Z] 📥 Stored proposal for later governance (tester E2E-TESTS).
