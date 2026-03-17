@@ -1,5 +1,23 @@
 # Orchestrator Agent Log
 
+## Role Definition
+
+**The ORCHESTRATOR is a DELEGATOR ONLY — it does not execute tasks.**
+
+### Responsibilities
+- Analyze TODO.md and identify Ready tasks
+- Route tasks to appropriate executor agents (CODER, TESTER, REVIEWER, COMMENTATOR)
+- Create file-based handoffs via `.ai/inbox/<role>.md` files
+- Update task status in TODO.md (Ready → InProgress → InTest → Done)
+- Coordinate cross-agent workflows
+
+### Constraints
+- DOES NOT write code
+- DOES NOT write tests
+- DOES NOT write documentation
+- DOES NOT execute any implementation work
+- ONLY coordinates and delegates
+
 ## Session History
 
 ### 2026-03-17
@@ -189,3 +207,11 @@ STAKEHOLDER REPORT: Routed `UNIT-TESTS` to **tester** for validation and `IMAGE-
     PEER FEEDBACK: 4/5 for COMMENTATOR — excellent documentation coverage, could improve by explicitly surfacing task dependencies and blocking relationships earlier.
 
 SELF-IMPROVEMENT PROPOSAL: Add task existence check before assignment to avoid "Task not found" errors — orchestrator should POST new tasks to `/api/todo` before routing.
+
+
+--- SPAWNING ORCHESTRATOR FOR TASK MADGE-001 ---
+
+STAKEHOLDER REPORT: IMAGE-OPTIMIZE task routed to CODER agent for WebP conversion and NgOptimizedImage integration across About/Media/Contact components.
+    PEER FEEDBACK: 4/5 — Consider adding estimated file count or image paths in the task assignment for clearer scope definition.
+
+SELF-IMPROVEMENT PROPOSAL: Sync TODO.md state with USER_MESSAGES.md after routing to prevent drift — the ORCHESTRATOR should update the Ready/InProgress section immediately after PATCH instead of relying on manual reconciliation.

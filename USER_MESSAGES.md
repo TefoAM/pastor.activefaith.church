@@ -378,3 +378,39 @@ T-ANGULAR-SSRF-FIX acceptance criteria met. The SSRF security restriction error 
 **Handoff:** Sent to ORCHESTRATOR via POST /api/message.
 
 ---
+
+### IMAGE-OPTIMIZE (CODER) — Done
+Image optimization complete for IMAGE-OPTIMIZE task:
+
+**WebP Conversion Results:**
+| Metric | Value |
+|--------|-------|
+| Images Converted | 11 JPG → WebP |
+| Total Original Size | 1,795.7 KB |
+| Total WebP Size | 1,049.2 KB |
+| Overall Reduction | 41.6% |
+
+**NgOptimizedImage Integration:**
+- ✅ About page: pastor-portrait.webp, topic-insight.webp
+- ✅ Media page: ministry-1.webp, 7 thumbnails (sermons + podcasts)
+- ✅ Contact page: No images (form-only page)
+- ✅ Speaking page: speaking-hero.webp, testimonial-1/2.webp, topic-insight.webp
+- ✅ Topic Detail page: speaking-hero.webp, topic-insight.webp, ministry-1.webp
+- ✅ Home page: strategy-card.webp, leadership-card.webp, discipleship-card.webp, hero-main.webp
+
+**Build Verification:**
+- ✅ `npm run build` completed with 0 errors and 0 warnings
+- ✅ 7 static routes prerendered
+- ✅ All images use NgOptimizedImage with fill directive
+
+**Key Improvements:**
+- hero-main: 288 KB → 132 KB (54.0% reduction)
+- speaking-hero: 244 KB → 84 KB (65.4% reduction)
+- pastor-portrait: 341 KB → 156 KB (54.3% reduction)
+
+**Commits:**
+- Pending — chore: convert JPG images to WebP and apply NgOptimizedImage for IMAGE-OPTIMIZE
+
+**Handoff:** Sent to REVIEWER via POST /api/message — IMAGE-OPTIMIZE complete.
+
+---

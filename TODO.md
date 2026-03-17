@@ -19,7 +19,7 @@ Canonical task board for the pastor.activefaith.church project.
 
 | ID | Task | Started | Notes |
 |----|------|---------|-------|
-| `IDLE-CLEANUP` | Documentation cleanup and consolidation | 2026-03-17 | ORCHESTRATOR leading, COMMENTATOR supporting |
+| `IDLE-CLEANUP` | Documentation cleanup and consolidation | 2026-03-17 | COMMENTATOR leading |
 | `PASTOR-BUNDLE-MASTER-PLAN` | Translate master engineering/product plan into phased delivery milestones | 2026-03-17 | CODER agent - file-based handoff via inbox |
 | `PASTOR-BUNDLE-PRD` | Deliver PRD-defined product outcomes for Pastor Abraham platform | 2026-03-17 | CODER agent - file-based handoff via inbox |
 
@@ -60,8 +60,8 @@ Canonical task board for the pastor.activefaith.church project.
 
 | ID | Task | Owner | Priority | Notes |
 |----|------|-------|----------|-------|
-| T-idle-cleanup-3561 | idle cleanup | orchestrator | P0 | Completed |
-| T-find-something-to-do-5723 | find something to do | orchestrator | P0 | Completed |
+| T-idle-cleanup-3561 | idle cleanup | commentator | P0 | Completed |
+| T-find-something-to-do-5723 | find something to do | commentator | P0 | Completed |
 - [ ] **UNIT-TESTS**: Update/add Vitest tests for 4 redesigned components | Owner: **tester** | Status: **InProgress** | Priority: **P2** | Note: BLOCKER for SWA deployment - tests must pass before deployment can proceed
-- [ ] **DEPLOY**: Deploy Angular app to Azure Static Web Apps | Owner: **orchestrator** | Status: **InProgress** | Priority: **P1** | Note: Infra located at /workspaces/activefaith-infra - ready for deployment
+- [ ] **DEPLOY**: Deploy Angular app to Azure Static Web Apps | Owner: **coder** | Status: **InProgress** | Priority: **P1** | Note: Infra located at /workspaces/activefaith-infra - ready for deployment
 - [ ] **IMAGE-OPTIMIZE**: Convert raw JPGs to WebP and apply NgOptimizedImage to About/Media/Contact | Owner: **coder** | Status: **InProgress** | Priority: **P2** | Note: HANDOVER.md

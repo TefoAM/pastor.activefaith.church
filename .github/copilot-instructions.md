@@ -2,6 +2,61 @@
 
 Canonical workspace instructions for this repo. Keep this file as the primary source for AI-agent defaults.
 
+## Agent Roles
+
+### ORCHESTRATOR (Delegator Only)
+**The ORCHESTRATOR does NOT execute tasks — it ONLY delegates.**
+
+Responsibilities:
+- Analyze TODO.md and identify Ready tasks
+- Route tasks to appropriate executor agents (CODER, TESTER, REVIEWER, COMMENTATOR)
+- Create file-based handoffs via `.ai/inbox/<role>.md` files
+- Update task status in TODO.md (Ready → InProgress → InTest → Done)
+- Coordinate cross-agent workflows
+
+Constraints:
+- DOES NOT write code
+- DOES NOT write tests
+- DOES NOT write documentation
+- DOES NOT execute any implementation work
+- ONLY coordinates and delegates
+
+### CODER (Executor)
+**The CODER executes implementation tasks.**
+
+Responsibilities:
+- Implement frontend features (Angular/TypeScript)
+- Implement API endpoints (Azure Functions/Node.js)
+- Refactor and optimize existing code
+- Fix bugs and technical debt
+
+### TESTER (Executor)
+**The TESTER executes testing tasks.**
+
+Responsibilities:
+- Write and maintain Vitest unit tests
+- Write and maintain Playwright E2E tests
+- Validate code quality and test coverage
+- Report test results and failures
+
+### REVIEWER (Executor)
+**The REVIEWER executes code review tasks.**
+
+Responsibilities:
+- Review pull requests and code changes
+- Verify adherence to coding standards
+- Check for security and performance issues
+- Approve or request changes
+
+### COMMENTATOR (Executor)
+**The COMMENTATOR executes documentation tasks.**
+
+Responsibilities:
+- Write and update project documentation
+- Add code comments and JSDoc annotations
+- Create user-facing guides and READMEs
+- Document architecture and decisions
+
 ## Code Style
 - Strict TypeScript across frontend and API. Do not introduce `any`.
 - Angular formatting follows `angular-app/package.json` Prettier config: single quotes, `printWidth: 100`.

@@ -94,13 +94,36 @@ Output: angular-app/dist/pastor-app
 
 ## What's NOT Done
 
-1. **No git repo** — `pastor.activefaith.church` has no `.git`. Need `git init` + first commit + push to remote.
-2. **No visual verification** — Templates haven't been visually inspected in browser. Should use `npx ng serve` or Playwright screenshots to validate layout.
-3. **About, Media, Contact pages** — Still have no images (no `NgOptimizedImage` usage). May need image treatment if desired.
-4. **No unit tests updated** — Existing `home.spec.ts` and `invite.spec.ts` may need adjustments for new template structure.
-5. **No E2E tests written** — Playwright config exists but no specs for the pastor site yet.
-6. **Image optimization** — Images are raw JPGs (31–341 KB). Consider WebP conversion or responsive `srcset` for production performance.
-7. **Deployment** — SWA infrastructure exists in `activefaith-infra` but no CI/CD pipeline is set up for this project yet.
+1. **No visual verification** — Templates haven't been visually inspected in browser. Should use `npx ng serve` or Playwright screenshots to validate layout.
+2. **No unit tests updated** — Existing `home.spec.ts` and `invite.spec.ts` may need adjustments for new template structure.
+3. **No E2E tests written** — Playwright config exists but no specs for the pastor site yet.
+4. **Deployment** — SWA infrastructure exists in `activefaith-infra` but no CI/CD pipeline is set up for this project yet.
+
+---
+
+## What's Done Now (Post-Handover)
+
+### IMAGE-OPTIMIZE (2026-03-17)
+- ✅ Converted all 11 JPG images to WebP format (41.6% overall size reduction)
+- ✅ Applied `NgOptimizedImage` to About, Media, Contact, Speaking, and Topic Detail pages
+- ✅ Updated Home page to use WebP images
+- ✅ Build passes with 0 errors and 0 warnings
+- ✅ Removed conversion script after use (`angular-app/scripts/convert-to-webp.mjs`)
+
+**Image Size Improvements:**
+| File | Original | WebP | Reduction |
+|------|----------|------|-----------|
+| hero-main | 288 KB | 132 KB | 54.0% |
+| speaking-hero | 244 KB | 84 KB | 65.4% |
+| pastor-portrait | 341 KB | 156 KB | 54.3% |
+| testimonial-1/2 | 170 KB | 118 KB | 30.6% |
+| ministry-1 | 129 KB | 90 KB | 30.6% |
+| topic-insight | 136 KB | 87 KB | 36.0% |
+| leadership-card | 123 KB | 110 KB | 10.5% |
+| discipleship-card | 84 KB | 57 KB | 31.6% |
+| strategy-card | 80 KB | 68 KB | 14.8% |
+| gallery-1 | 31 KB | 28 KB | 8.8% |
+| **Total** | **1.8 MB** | **1.0 MB** | **41.6%**
 
 ---
 

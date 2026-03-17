@@ -341,3 +341,17 @@ task: DEPLOY
 ---
 ** Before attempting API routing, verify available endpoints by reading the API source code or checking an API schema/README to avoid failed routing attempts.
 
+---
+timestamp: 2026-03-17T21:21:17.080Z
+from: coder
+task: MADGE-001
+---
+** Add a pre-commit validation script that checks for duplicate entries in pending-proposals.md and validates TODO.md ledger schema consistency before allowing commits, preventing the drift that COMMENTATOR agent flagged.
+
+---
+timestamp: 2026-03-17T21:21:34.921Z
+from: orchestrator
+task: MADGE-001
+---
+** Before attempting API routing, verify available endpoints by reading the API source code or checking an API schema/README to avoid failed routing attempts.
+
