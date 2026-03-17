@@ -37,6 +37,7 @@ Canonical task board for the pastor.activefaith.church project.
 
 | ID | Task | Completed | Notes |
 |----|------|-----------|-------|
+| `MADGE-001` | Install madge and create dependency analysis plan | 2026-03-17 | CODER agent - Madge installed, 0 circular dependencies found, analysis doc at docs/MADGE-001-dependency-analysis.md ✅ |
 | `DEPLOY` | Deploy Angular app to Azure Static Web Apps | 2026-03-17 | COMMENTATOR agent - All quality gates pass (8 unit + 2 API + 15 E2E), build 0 errors/0 warnings, CI-CD ready for production auto-deploy on main push ✅ |
 | `CI-CD-PIPELINE` | Set up GitHub Actions + Azure Static Web Apps deployment | 2026-03-17 | CODER agent - Verified existing workflows: deploy-staging-swa.yml (staging), deploy-production-swa.yml (main + PR previews), close-pr-preview.yml. All 25 tests pass ✅ |
 | `T-ANGULAR-SSRF-FIX` | Fix Angular SSRF error by configuring allowed hosts for ng serve | 2026-03-17 | CODER agent - angular.json updated with allowedHosts ✅ |
@@ -61,5 +62,6 @@ Canonical task board for the pastor.activefaith.church project.
 |----|------|-------|----------|-------|
 | T-idle-cleanup-3561 | idle cleanup | orchestrator | P0 | Completed |
 | T-find-something-to-do-5723 | find something to do | orchestrator | P0 | Completed |
-- [ ] **UNIT-TESTS**: Update/add Vitest tests for 4 redesigned components | Owner: **tester** | Status: **Completed** | Priority: **P2** | Note: BLOCKER for SWA deployment - tests must pass before deployment can proceed
-- [ ] **DEPLOY**: Deploy Angular app to Azure Static Web Apps | Owner: **orchestrator** | Status: **InProgress** | Priority: **P1** | Note: Unit tests completed - ready for deployment
+- [ ] **UNIT-TESTS**: Update/add Vitest tests for 4 redesigned components | Owner: **tester** | Status: **InProgress** | Priority: **P2** | Note: BLOCKER for SWA deployment - tests must pass before deployment can proceed
+- [ ] **DEPLOY**: Deploy Angular app to Azure Static Web Apps | Owner: **orchestrator** | Status: **InProgress** | Priority: **P1** | Note: Infra located at /workspaces/activefaith-infra - ready for deployment
+- [ ] **IMAGE-OPTIMIZE**: Convert raw JPGs to WebP and apply NgOptimizedImage to About/Media/Contact | Owner: **coder** | Status: **InProgress** | Priority: **P2** | Note: HANDOVER.md

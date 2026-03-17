@@ -390,7 +390,7 @@
   },
   {
     "taskId": "UNIT-TESTS",
-    "handoffCount": 4,
+    "handoffCount": 5,
     "firstSeenAt": "2026-03-17T18:57:51.566Z",
     "completedAt": null,
     "agentRuns": [
@@ -469,7 +469,7 @@
   },
   {
     "taskId": "DEPLOY",
-    "handoffCount": 3,
+    "handoffCount": 4,
     "firstSeenAt": "2026-03-17T20:19:06.590Z",
     "completedAt": null,
     "agentRuns": [
@@ -486,6 +486,24 @@
         "role": "orchestrator",
         "timestamp": "2026-03-17T20:54:52.398Z",
         "executionTimeSeconds": 23,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 3,
+        "model": "qwen3-coder-plus"
+      },
+      {
+        "role": "commentator",
+        "timestamp": "2026-03-17T21:09:48.186Z",
+        "executionTimeSeconds": 229,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": null,
+        "model": "qwen3-coder-plus"
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T21:18:42.940Z",
+        "executionTimeSeconds": 43,
         "retryCount": 0,
         "actionCount": 0,
         "peerGrade": 3,
@@ -518,5 +536,19 @@
         "model": null
       }
     ]
+  },
+  {
+    "taskId": "MADGE-001",
+    "handoffCount": 2,
+    "firstSeenAt": "2026-03-17T21:17:26.720Z",
+    "completedAt": null,
+    "agentRuns": []
+  },
+  {
+    "taskId": "IMAGE-OPTIMIZE",
+    "handoffCount": 1,
+    "firstSeenAt": "2026-03-17T21:18:37.602Z",
+    "completedAt": null,
+    "agentRuns": []
   }
 ]

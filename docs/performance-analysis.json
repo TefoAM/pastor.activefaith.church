@@ -1,23 +1,23 @@
 {
-  "timestamp": "2026-03-17T21:05:59.392Z",
-  "metricsSampleSize": 11,
+  "timestamp": "2026-03-17T21:19:59.922Z",
+  "metricsSampleSize": 13,
   "roleStats": {
     "commentator": {
-      "totalRuns": 6,
-      "avgExecutionTime": 139.83333333333334,
+      "totalRuns": 7,
+      "avgExecutionTime": 152.57142857142858,
       "avgRetryCount": 0,
       "successRate": 1,
       "retryRate": 0,
       "avgPeerGrade": 4,
-      "lastRunAt": "2026-03-17T19:35:10.811Z"
+      "lastRunAt": "2026-03-17T21:09:48.186Z"
     },
     "orchestrator": {
-      "totalRuns": 31,
-      "avgExecutionTime": 61.65,
+      "totalRuns": 32,
+      "avgExecutionTime": 60.1,
       "avgRetryCount": 0,
-      "successRate": 0.967741935483871,
-      "retryRate": 0.03225806451612903,
-      "avgPeerGrade": 3.7142857142857144,
+      "successRate": 0.96875,
+      "retryRate": 0.03125,
+      "avgPeerGrade": 3.689655172413793,
       "lastRunAt": "2026-03-17T20:22:22.012Z"
     },
     "coder": {
@@ -97,23 +97,33 @@
     "orchestrator:qwen3-coder-plus": {
       "role": "orchestrator",
       "model": "qwen3-coder-plus",
-      "totalRuns": 1,
-      "avgExecutionTime": 23,
+      "totalRuns": 2,
+      "avgExecutionTime": 33,
       "successRate": 1,
       "avgPeerGrade": 3,
+      "isSignificant": false
+    },
+    "commentator:qwen3-coder-plus": {
+      "role": "commentator",
+      "model": "qwen3-coder-plus",
+      "totalRuns": 1,
+      "avgExecutionTime": 229,
+      "successRate": 1,
+      "avgPeerGrade": null,
       "isSignificant": false
     }
   },
   "taskStats": {
-    "totalTasks": 11,
+    "totalTasks": 13,
     "completedTasks": 0,
-    "incompleteTasks": 11,
+    "incompleteTasks": 13,
     "completionRate": 0,
     "avgTimeToResolution": null,
-    "avgHandoffs": 2.4545454545454546,
+    "avgHandoffs": 2.4615384615384617,
     "highHandoffTasks": [
       "GIT-INIT",
-      "UNIT-TESTS"
+      "UNIT-TESTS",
+      "DEPLOY"
     ]
   },
   "anomalies": [],

@@ -58,3 +58,6 @@
     ---
     ## SELF-IMPROVEMENT PROPOSAL
     Add a `npm run test:all` script at root level that runs `npm run preflight` (typecheck + test + test:api + build) in a single command for faster full-suite verification before commits.
+
+
+--- SPAWNING TESTER FOR TASK UNIT-TESTS ---

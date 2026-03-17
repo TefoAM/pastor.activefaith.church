@@ -1,0 +1,57 @@
+{
+  "app/about/about.ts": [],
+  "app/app.config.server.ts": [
+    "app/app.config.ts",
+    "app/app.routes.server.ts"
+  ],
+  "app/app.config.ts": [
+    "app/app.routes.ts",
+    "app/services/error-handler.service.ts"
+  ],
+  "app/app.routes.server.ts": [],
+  "app/app.routes.ts": [
+    "app/about/about.ts",
+    "app/contact/contact.ts",
+    "app/home/home.ts",
+    "app/invite/invite.ts",
+    "app/media/media.ts",
+    "app/privacy-policy/privacy-policy.ts",
+    "app/speaking/speaking.ts",
+    "app/speaking/topic-detail.ts"
+  ],
+  "app/app.spec.ts": [
+    "app/app.routes.ts",
+    "app/app.ts"
+  ],
+  "app/app.ts": [
+    "app/layout/footer.ts",
+    "app/layout/header.ts",
+    "app/services/monitoring.service.ts"
+  ],
+  "app/contact/contact.ts": [
+    "app/services/api.service.ts"
+  ],
+  "app/home/home.ts": [],
+  "app/invite/invite.ts": [
+    "app/services/api.service.ts"
+  ],
+  "app/layout/footer.ts": [],
+  "app/layout/header.ts": [],
+  "app/media/media.ts": [],
+  "app/privacy-policy/privacy-policy.ts": [],
+  "app/services/api.service.ts": [
+    "environments/environment.ts"
+  ],
+  "app/services/error-handler.service.ts": [
+    "app/services/monitoring.service.ts"
+  ],
+  "app/services/monitoring.service.ts": [
+    "environments/environment.ts"
+  ],
+  "app/speaking/speaking.ts": [],
+  "app/speaking/topic-detail.ts": [
+    "app/speaking/speaking.ts"
+  ],
+  "environments/environment.development.ts": [],
+  "environments/environment.ts": []
+}
