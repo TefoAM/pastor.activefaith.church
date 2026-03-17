@@ -67,3 +67,19 @@ TODO file merge complete:
 - **Handoff:** Sent to REVIEWER for verification
 
 ---
+
+### T-merge-todo-files-8842 (REVIEWER) — Done
+Code review and verification complete for T-merge-todo-files-8842:
+
+**Review Summary:**
+- ✅ TODO consolidation verified: `docs/TODO.md` archived with clear pointer to canonical root `TODO.md`
+- ✅ Historical content preserved in `docs/TODO.md` with migration note
+- ✅ Root `TODO.md` updated with IDLE-CLEANUP ownership clarification
+- ✅ Unit tests: 8/8 PASS (Vitest)
+- ✅ Conventional commits: CODER commit `12b84ec` follows conventional commit format
+- ✅ Handoff sent to ORCHESTRATOR via POST /api/message
+
+**Commits:**
+- `994213c` — review: T-merge-todo-files-8842 verification — TODO consolidation complete, TESTER grade 4/5
+
+---
