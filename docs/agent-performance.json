@@ -62,7 +62,7 @@
   },
   {
     "taskId": "GIT-INIT",
-    "handoffCount": 2,
+    "handoffCount": 4,
     "firstSeenAt": "2026-03-17T16:25:11.148Z",
     "completedAt": null,
     "agentRuns": [
