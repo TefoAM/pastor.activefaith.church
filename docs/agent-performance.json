@@ -565,7 +565,7 @@
   },
   {
     "taskId": "IMAGE-OPTIMIZE",
-    "handoffCount": 2,
+    "handoffCount": 3,
     "firstSeenAt": "2026-03-17T21:18:37.602Z",
     "completedAt": null,
     "agentRuns": []

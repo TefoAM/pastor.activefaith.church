@@ -193,3 +193,11 @@ Structured log of agent sessions. For human-readable summaries, see `activity-lo
 [2026-03-17T21:23:29.859Z] ⏱️ [TESTER] Task UNIT-TESTS timed out after 300s. Killing.
 [2026-03-17T21:25:00.040Z] 📊 Auto-tune analysis completed. Anomalies: 0
 [2026-03-17T21:26:00.037Z] 🚀 [AUTONOMOUS] Spawning COMMENTATOR for Task UNIT-TESTS using brand qwen (Attempt 1)
+[2026-03-17T21:26:29.967Z] ⏱️ [CODER] Task IMAGE-OPTIMIZE timed out after 300s. Killing.
+[2026-03-17T21:26:30.037Z] 🚀 [AUTONOMOUS] Spawning REVIEWER for Task IMAGE-OPTIMIZE using brand qwen (Attempt 1)
+[2026-03-17T21:26:32.976Z] ❌ [TESTER] Task UNIT-TESTS failed (Exit Code: null).
+[2026-03-17T21:26:32.986Z] 🔄 Adaptive retry for tester (error: timeout, attempt: 0, delay: 14624ms)
+[2026-03-17T21:26:37.898Z] ❌ [CODER] Task IMAGE-OPTIMIZE failed (Exit Code: null).
+[2026-03-17T21:26:37.899Z] 🔄 Adaptive retry for coder (error: timeout, attempt: 0, delay: 12946ms)
+[2026-03-17T21:26:47.618Z] 🚀 [AUTONOMOUS] Spawning TESTER for Task UNIT-TESTS using brand qwen (Attempt 2)
+[2026-03-17T21:26:50.851Z] 🚀 [AUTONOMOUS] Spawning CODER for Task IMAGE-OPTIMIZE using brand qwen (Attempt 2)
