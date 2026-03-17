@@ -446,6 +446,76 @@
         "actionCount": 0,
         "peerGrade": 4,
         "model": null
+      },
+      {
+        "role": "commentator",
+        "timestamp": "2026-03-17T19:35:10.811Z",
+        "executionTimeSeconds": 221,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": null,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T19:35:21.761Z",
+        "executionTimeSeconds": 22,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 3,
+        "model": null
+      }
+    ]
+  },
+  {
+    "taskId": "DEPLOY",
+    "handoffCount": 3,
+    "firstSeenAt": "2026-03-17T20:19:06.590Z",
+    "completedAt": null,
+    "agentRuns": [
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T20:20:08.470Z",
+        "executionTimeSeconds": 38,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 3,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T20:54:52.398Z",
+        "executionTimeSeconds": 23,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 3,
+        "model": "qwen3-coder-plus"
+      }
+    ]
+  },
+  {
+    "taskId": "CI-CD-PIPELINE",
+    "handoffCount": 2,
+    "firstSeenAt": "2026-03-17T20:19:59.265Z",
+    "completedAt": null,
+    "agentRuns": [
+      {
+        "role": "coder",
+        "timestamp": "2026-03-17T20:22:20.695Z",
+        "executionTimeSeconds": 140,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 4,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T20:22:22.012Z",
+        "executionTimeSeconds": 21,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 3,
+        "model": null
       }
     ]
   }

@@ -285,3 +285,45 @@ task: T-ANGULAR-SSRF-FIX
 ---
 ** Add a pre-commit validation script that checks for duplicate entries in pending-proposals.md and validates TODO.md ledger schema consistency before allowing commits, preventing the drift that COMMENTATOR agent flagged.
 
+---
+timestamp: 2026-03-17T19:35:10.810Z
+from: commentator
+task: T-ANGULAR-SSRF-FIX
+---
+** Automate LEDGER.md commit hash updates — currently requires manual two-step process (commit docs, then update LEDGER with hash). Proposal: Add post-commit hook or script that auto-appends the commit SHA to the LEDGER entry, reducing manual steps and potential drift.
+
+---
+timestamp: 2026-03-17T19:35:21.761Z
+from: orchestrator
+task: T-ANGULAR-SSRF-FIX
+---
+** Before attempting API routing, verify available endpoints by reading the API source code or checking an API schema/README to avoid failed routing attempts.
+
+---
+timestamp: 2026-03-17T20:20:08.470Z
+from: orchestrator
+task: DEPLOY
+---
+** Before attempting API routing, verify available endpoints by reading the API source code or checking an API schema/README to avoid failed routing attempts.
+
+---
+timestamp: 2026-03-17T20:22:20.695Z
+from: coder
+task: CI-CD-PIPELINE
+---
+** Add a pre-commit validation script that checks for duplicate entries in pending-proposals.md and validates TODO.md ledger schema consistency before allowing commits, preventing the drift that COMMENTATOR agent flagged.
+
+---
+timestamp: 2026-03-17T20:22:22.012Z
+from: orchestrator
+task: CI-CD-PIPELINE
+---
+** Before attempting API routing, verify available endpoints by reading the API source code or checking an API schema/README to avoid failed routing attempts.
+
+---
+timestamp: 2026-03-17T20:54:52.398Z
+from: orchestrator
+task: DEPLOY
+---
+** Before attempting API routing, verify available endpoints by reading the API source code or checking an API schema/README to avoid failed routing attempts.
+

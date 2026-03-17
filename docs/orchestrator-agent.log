@@ -128,3 +128,48 @@ SELF-IMPROVEMENT PROPOSAL: Create a task template file (`.ai/templates/task-hand
 
 
 --- SPAWNING ORCHESTRATOR FOR TASK T-ANGULAR-SSRF-FIX ---
+
+STAKEHOLDER REPORT: ROUTED `UNIT-TESTS` (highest-priority Ready task per TODO.md table order) to TESTER agent for validation, and `IMAGE-OPTIMIZE` to CODER agent for implementation as secondary Ready task.
+    PEER FEEDBACK: Grade 4 for COMMENTATOR — improvement: add specific metric thresholds (e.g., "WebP should achieve 30-50% size reduction") to evaluation criteria for more actionable feedback.
+
+SELF-IMPROVEMENT PROPOSAL: Add priority column to Ready tasks table in TODO.md to eliminate ambiguity when selecting "highest-priority" task — currently relies on table order which may not reflect true priority.
+
+
+--- SPAWNING ORCHESTRATOR FOR TASK DEPLOY ---
+
+STAKEHOLDER REPORT: CI-CD-PIPELINE task routed to CODER agent for GitHub Actions + Azure Static Web Apps deployment implementation.
+    PEER FEEDBACK: Grade 4/5 for REVIEWER — consider adding a pre-deployment checklist to verify unit/E2E test gates before CI/CD pipeline runs.
+
+SELF-IMPROVEMENT PROPOSAL: Automate Ready→InProgress status transition when task assignment succeeds to reduce API call overhead.
+
+
+--- SPAWNING ORCHESTRATOR FOR TASK CI-CD-PIPELINE ---
+    **Analysis:**
+    From TODO.md, I found **2 Ready tasks**:
+    1. `UNIT-TESTS` - Update/add Vitest tests for 4 redesigned components (marked as Done in Done section with 8/8 tests passing)
+    2. `IMAGE-OPTIMIZE` - Convert raw JPGs to WebP and apply NgOptimizedImage to About/Media/Contact
+    The highest-priority Ready task is **`IMAGE-OPTIMIZE`** (P2 per HANDOVER.md context, and it's the only actionable Ready task remaining).
+    This is **frontend implementation work** (image conversion + Angular's NgOptimizedImage integration) → routes to **CODER** agent.
+    From USER_MESSAGES.md: No unaddressed user directives pending. The IMAGE-OPTIMIZE task is already marked InProgress by ORCHESTRATOR with a handoff file created for CODER.
+    Since IMAGE-OPTIMIZE is already InProgress with owner "orchestrator" and CODER has been assigned via inbox handoff, I need to formally assign via API and update the task status.
+    ---
+    **STAKEHOLDER REPORT:** Routed IMAGE-OPTIMIZE task (WebP conversion + NgOptimizedImage integration for About/Media/Contact pages) to CODER agent for implementation.
+    **PEER FEEDBACK:** TESTER grade 4/5 — Excellent test coverage (25/25 passing); improvement: add visual regression tests for image optimization to catch size/quality regressions.
+    **SELF-IMPROVEMENT PROPOSAL:** Automate Ready→InProgress transition when creating inbox handoff files to reduce two-step manual routing (currently ORCHESTRATOR creates handoff then separately updates TODO.md status).
+
+
+--- SPAWNING ORCHESTRATOR FOR TASK DEPLOY ---
+    I can see the TODO.md has 2 Ready tasks:
+    1. `UNIT-TESTS` - Already marked as Done in USER_MESSAGES.md (8/8 tests pass)
+    2. `IMAGE-OPTIMIZE` - Already marked as InProgress by ORCHESTRATOR
+    Looking at the Ready section, both tasks appear to need routing. The `UNIT-TESTS` task is complete per USER_MESSAGES.md, but `IMAGE-OPTIMIZE` was just routed to CODER.
+    Since `IMAGE-OPTIMIZE` is already InProgress and assigned to CODER, and `UNIT-TESTS` is complete, there are **no Ready tasks remaining** that need delegation.
+    However, I notice the TODO.md shows `UNIT-TESTS` still in "Ready" section while USER_MESSAGES.md shows it as Done. This is a documentation sync issue. The actual next actionable item would be to update TODO.md to reflect completed work.
+    But per my instructions - I only delegate Ready tasks. Since:
+    - `UNIT-TESTS` = Complete (Done section in USER_MESSAGES.md confirms)
+    - `IMAGE-OPTIMIZE` = Already InProgress (routed to CODER)
+    **No Ready tasks exist requiring delegation.**
+    ---
+    **STAKEHOLDER REPORT:** No Ready tasks require routing — UNIT-TESTS is complete (25/25 tests pass), IMAGE-OPTIMIZE already InProgress with CODER agent.
+    **PEER FEEDBACK:** TESTER grade 5/5 — thorough test coverage across all suites; improvement: consider adding performance regression tests for image optimization tasks.
+    **SELF-IMPROVEMENT PROPOSAL:** Implement automatic TODO.md status sync when tasks are marked Done in USER_MESSAGES.md to prevent Ready/Done state drift.

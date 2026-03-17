@@ -1,0 +1,128 @@
+{
+  "timestamp": "2026-03-17T21:05:59.392Z",
+  "metricsSampleSize": 11,
+  "roleStats": {
+    "commentator": {
+      "totalRuns": 6,
+      "avgExecutionTime": 139.83333333333334,
+      "avgRetryCount": 0,
+      "successRate": 1,
+      "retryRate": 0,
+      "avgPeerGrade": 4,
+      "lastRunAt": "2026-03-17T19:35:10.811Z"
+    },
+    "orchestrator": {
+      "totalRuns": 31,
+      "avgExecutionTime": 61.65,
+      "avgRetryCount": 0,
+      "successRate": 0.967741935483871,
+      "retryRate": 0.03225806451612903,
+      "avgPeerGrade": 3.7142857142857144,
+      "lastRunAt": "2026-03-17T20:22:22.012Z"
+    },
+    "coder": {
+      "totalRuns": 4,
+      "avgExecutionTime": 120.25,
+      "avgRetryCount": 0,
+      "successRate": 1,
+      "retryRate": 0,
+      "avgPeerGrade": 4,
+      "lastRunAt": "2026-03-17T20:22:20.695Z"
+    },
+    "reviewer": {
+      "totalRuns": 3,
+      "avgExecutionTime": 138,
+      "avgRetryCount": 0,
+      "successRate": 1,
+      "retryRate": 0,
+      "avgPeerGrade": null,
+      "lastRunAt": "2026-03-17T19:06:02.949Z"
+    },
+    "tester": {
+      "totalRuns": 4,
+      "avgExecutionTime": 196.25,
+      "avgRetryCount": 0.25,
+      "successRate": 0.75,
+      "retryRate": 0.25,
+      "avgPeerGrade": 4,
+      "lastRunAt": "2026-03-17T19:01:30.302Z"
+    }
+  },
+  "modelStats": {
+    "commentator:default": {
+      "role": "commentator",
+      "model": "default",
+      "totalRuns": 6,
+      "avgExecutionTime": 139.83333333333334,
+      "successRate": 1,
+      "avgPeerGrade": 4,
+      "isSignificant": true
+    },
+    "orchestrator:default": {
+      "role": "orchestrator",
+      "model": "default",
+      "totalRuns": 30,
+      "avgExecutionTime": 62.75,
+      "successRate": 0.9666666666666667,
+      "avgPeerGrade": 3.740740740740741,
+      "isSignificant": true
+    },
+    "coder:default": {
+      "role": "coder",
+      "model": "default",
+      "totalRuns": 4,
+      "avgExecutionTime": 120.25,
+      "successRate": 1,
+      "avgPeerGrade": 4,
+      "isSignificant": false
+    },
+    "reviewer:default": {
+      "role": "reviewer",
+      "model": "default",
+      "totalRuns": 3,
+      "avgExecutionTime": 138,
+      "successRate": 1,
+      "avgPeerGrade": null,
+      "isSignificant": false
+    },
+    "tester:default": {
+      "role": "tester",
+      "model": "default",
+      "totalRuns": 4,
+      "avgExecutionTime": 196.25,
+      "successRate": 0.75,
+      "avgPeerGrade": 4,
+      "isSignificant": false
+    },
+    "orchestrator:qwen3-coder-plus": {
+      "role": "orchestrator",
+      "model": "qwen3-coder-plus",
+      "totalRuns": 1,
+      "avgExecutionTime": 23,
+      "successRate": 1,
+      "avgPeerGrade": 3,
+      "isSignificant": false
+    }
+  },
+  "taskStats": {
+    "totalTasks": 11,
+    "completedTasks": 0,
+    "incompleteTasks": 11,
+    "completionRate": 0,
+    "avgTimeToResolution": null,
+    "avgHandoffs": 2.4545454545454546,
+    "highHandoffTasks": [
+      "GIT-INIT",
+      "UNIT-TESTS"
+    ]
+  },
+  "anomalies": [],
+  "recommendations": {
+    "model": {}
+  },
+  "thresholds": {
+    "minPeerGrade": 2.5,
+    "maxRetryRate": 0.4,
+    "ttrSpikeMultiplier": 2
+  }
+}
