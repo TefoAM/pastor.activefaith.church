@@ -36,3 +36,7 @@
 [2026-03-17T16:25:24.700Z] 🚀 [AUTONOMOUS] Spawning CODER for Task GIT-INIT using brand qwen (Attempt 1)
 [2026-03-17T16:25:42.440Z] ✅ [ORCHESTRATOR] Task IDLE-ROUTING session ended successfully.
 [2026-03-17T16:25:42.442Z] 📥 Stored proposal for later governance (orchestrator IDLE-ROUTING).
+[2026-03-17T16:26:24.700Z] 🚀 [AUTONOMOUS] Spawning TESTER for Task GIT-INIT using brand qwen (Attempt 1)
+[2026-03-17T16:26:32.118Z] ✅ [CODER] Task GIT-INIT session ended successfully.
+[2026-03-17T16:26:32.120Z] 📥 Stored proposal for later governance (coder GIT-INIT).
+[2026-03-17T16:31:24.735Z] ⏱️ [TESTER] Task GIT-INIT timed out after 300s. Killing.

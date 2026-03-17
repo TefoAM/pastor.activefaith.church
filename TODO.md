@@ -24,7 +24,6 @@ Canonical task board for the pastor.activefaith.church project.
 
 | ID | Task | Started | Notes |
 |----|------|---------|-------|
-| `GIT-INIT` | Initialize git repository and create first commit | 2026-03-17 | CODER agent |
 | `IDLE-CLEANUP` | Documentation cleanup and consolidation | 2026-03-17 | COMMENTATOR agent |
 
 ---
@@ -47,6 +46,7 @@ Canonical task board for the pastor.activefaith.church project.
 | `PASTOR-BUNDLE-UX-LEVEL-UP-DIFFS` | UX improvements implementation | 2026-03-09 | CODER agent |
 | `DOCS-BOOTSTRAP-TODO-LEDGER` | Bootstrap TODO ledger system | 2026-03-09 | CODER agent |
 | `IDLE-ROUTING` | Task routing and analysis | 2026-03-17 | ORCHESTRATOR agent |
+| `GIT-INIT` | Initialize git repository and create first commit | 2026-03-17 | TESTER agent - verified all tests pass |
 
 ---
 

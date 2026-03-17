@@ -62,9 +62,19 @@
   },
   {
     "taskId": "GIT-INIT",
-    "handoffCount": 1,
+    "handoffCount": 2,
     "firstSeenAt": "2026-03-17T16:25:11.148Z",
     "completedAt": null,
-    "agentRuns": []
+    "agentRuns": [
+      {
+        "role": "coder",
+        "timestamp": "2026-03-17T16:26:32.120Z",
+        "executionTimeSeconds": 67,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 4,
+        "model": null
+      }
+    ]
   }
 ]

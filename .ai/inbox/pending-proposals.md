@@ -26,3 +26,10 @@ task: IDLE-ROUTING
 ---
 ** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
 
+---
+timestamp: 2026-03-17T16:26:32.120Z
+from: coder
+task: GIT-INIT
+---
+** Add a pre-commit validation script that checks for duplicate entries in pending-proposals.md and validates TODO.md ledger schema consistency before allowing commits, preventing the drift that COMMENTATOR agent flagged.
+

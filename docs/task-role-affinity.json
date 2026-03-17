@@ -16,8 +16,16 @@
         "totalPeerGrade": 0,
         "gradedRuns": 0,
         "lastRunAt": "2026-03-17T16:25:42.442Z"
+      },
+      "coder": {
+        "totalRuns": 1,
+        "totalExecutionTime": 67,
+        "successfulRuns": 1,
+        "totalPeerGrade": 4,
+        "gradedRuns": 1,
+        "lastRunAt": "2026-03-17T16:26:32.120Z"
       }
     }
   },
-  "lastUpdated": "2026-03-17T16:25:42.443Z"
+  "lastUpdated": "2026-03-17T16:26:32.120Z"
 }
