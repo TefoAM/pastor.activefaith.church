@@ -25,3 +25,6 @@
 - **gemini agent unavailable** in this environment — all tasks use qwen
 - For system-level activity timestamps, see `docs/agent-os.log`
     IDLE-CLEANUP complete. Exiting.
+
+
+--- SPAWNING COMMENTATOR FOR TASK GIT-INIT ---

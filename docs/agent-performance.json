@@ -62,7 +62,7 @@
   },
   {
     "taskId": "GIT-INIT",
-    "handoffCount": 4,
+    "handoffCount": 5,
     "firstSeenAt": "2026-03-17T16:25:11.148Z",
     "completedAt": null,
     "agentRuns": [
@@ -70,6 +70,24 @@
         "role": "coder",
         "timestamp": "2026-03-17T16:26:32.120Z",
         "executionTimeSeconds": 67,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 4,
+        "model": null
+      },
+      {
+        "role": "reviewer",
+        "timestamp": "2026-03-17T16:36:13.251Z",
+        "executionTimeSeconds": 168,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": null,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T16:36:17.626Z",
+        "executionTimeSeconds": 53,
         "retryCount": 0,
         "actionCount": 0,
         "peerGrade": 4,

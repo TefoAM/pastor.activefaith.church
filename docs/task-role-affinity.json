@@ -10,12 +10,12 @@
         "lastRunAt": "2026-03-17T16:23:55.881Z"
       },
       "orchestrator": {
-        "totalRuns": 3,
-        "totalExecutionTime": 168,
-        "successfulRuns": 2,
-        "totalPeerGrade": 0,
-        "gradedRuns": 0,
-        "lastRunAt": "2026-03-17T16:25:42.442Z"
+        "totalRuns": 4,
+        "totalExecutionTime": 221,
+        "successfulRuns": 3,
+        "totalPeerGrade": 4,
+        "gradedRuns": 1,
+        "lastRunAt": "2026-03-17T16:36:17.626Z"
       },
       "coder": {
         "totalRuns": 1,
@@ -24,8 +24,16 @@
         "totalPeerGrade": 4,
         "gradedRuns": 1,
         "lastRunAt": "2026-03-17T16:26:32.120Z"
+      },
+      "reviewer": {
+        "totalRuns": 1,
+        "totalExecutionTime": 168,
+        "successfulRuns": 1,
+        "totalPeerGrade": 0,
+        "gradedRuns": 0,
+        "lastRunAt": "2026-03-17T16:36:13.252Z"
       }
     }
   },
-  "lastUpdated": "2026-03-17T16:26:32.120Z"
+  "lastUpdated": "2026-03-17T16:36:17.627Z"
 }
