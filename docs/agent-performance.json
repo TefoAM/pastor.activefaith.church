@@ -195,7 +195,7 @@
   },
   {
     "taskId": "T-merge-todo-files-8842",
-    "handoffCount": 2,
+    "handoffCount": 3,
     "firstSeenAt": "2026-03-17T18:16:44.970Z",
     "completedAt": null,
     "agentRuns": [
