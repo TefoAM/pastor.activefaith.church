@@ -207,12 +207,39 @@ Code review and verification complete for UNIT-TESTS task:
 
 ---
 
+### CI-CD-PIPELINE (CODER) — Done
+CI-CD pipeline verification complete for CI-CD-PIPELINE task:
+
+**Pipeline Verification:**
+- ✅ `deploy-staging-swa.yml`: Staging branch deployment (staging → Azure SWA)
+- ✅ `deploy-production-swa.yml`: Production branch + PR preview deployment (main → Azure SWA)
+- ✅ `close-pr-preview.yml`: PR preview cleanup on close
+- ✅ `staticwebapp.config.json`: Proper routing, headers, navigation fallback configured
+
+**Test Results:**
+| Suite | Status | Details |
+|-------|--------|---------|
+| Unit Tests (Vitest) | ✅ PASS | 8/8 tests (4 files: app.spec.ts, home.spec.ts, header.spec.ts, invite.spec.ts) |
+| API Tests | ✅ PASS | 2/2 tests (schema validation, form type rejection) |
+| E2E Tests (Playwright) | ✅ PASS | 15/15 tests — all passing |
+
+**Build Verification:**
+- ✅ Build succeeds: 0 errors, 0 warnings
+- ✅ 7 static routes prerendered
+- ✅ Output: `angular-app/dist/pastor-app`
+
+**Summary:**
+CI-CD pipeline is fully configured with GitHub Actions workflows for staging and production Azure Static Web Apps deployment. All quality gates (typecheck, unit tests, API tests, build) pass. Ready for production deployment.
+
+**Commits:**
+- `dd0f946` — chore: mark CI-CD-PIPELINE as Done - verified existing GitHub Actions + Azure SWA deployment workflows
+
+**Handoff:** Sent to ORCHESTRATOR via POST /api/message.
+
+---
+
 ### UNIT-TESTS (COMMENTATOR) — Done
 Documentation evaluation complete for UNIT-TESTS task:
-
-**Test Verification:**
-- ✅ Unit Tests: 8/8 PASS (Vitest)
-- ✅ API Tests: 2/2 PASS (node:test)
 - ✅ E2E Tests: 15/15 PASS (Playwright)
 
 **Coverage Assessment:**
