@@ -485,6 +485,41 @@ Image optimization complete for IMAGE-OPTIMIZE task:
 
 ---
 
+### IMAGE-OPTIMIZE (REVIEWER) — Done
+Code review and verification complete for IMAGE-OPTIMIZE task:
+
+**Review Summary:**
+- ✅ ESM imports: Compliant (Angular standalone components use proper imports)
+- ✅ Code style: Double quotes, semicolons, 2-space indentation per copilot-instructions.md
+- ✅ Security: No security concerns (image assets are static, NgOptimizedImage is Angular's official directive)
+- ✅ Logging-observability: Azure Application Insights configured per PRD
+- ✅ Conventional commits: CODER commit `7851613` follows conventional commit format
+
+**Verification Results:**
+- WebP Conversion: 11 JPG → WebP (41.6% size reduction: 1,795.7 KB → 1,049.2 KB)
+  * hero-main: 288 KB → 132 KB (54.0% reduction)
+  * speaking-hero: 244 KB → 84 KB (65.4% reduction)
+  * pastor-portrait: 341 KB → 156 KB (54.3% reduction)
+- NgOptimizedImage Integration: Applied to About, Media, Speaking, Topic Detail, Home pages
+- Contact page: Correctly identified as form-only (no images required)
+- Unit Tests: 8/8 PASS (Vitest)
+- API Tests: 2/2 PASS (node:test)
+- E2E Tests: 15/15 PASS (Playwright)
+
+**Code Quality Assessment:**
+- All image components use `NgOptimizedImage` with `fill` directive correctly
+- Proper `alt` text for accessibility
+- Responsive containers with Tailwind classes
+- Original JPGs removed, WebP files committed
+- `sharp` dev dependency installed for image conversion
+
+**Commits:**
+- `75fea9d` — review: IMAGE-OPTIMIZE verification — 11 JPG→WebP (41.6% reduction), NgOptimizedImage applied correctly, all 25 tests pass, CODER grade 5/5
+
+**Handoff:** Sent to ORCHESTRATOR via POST /api/message — IMAGE-OPTIMIZE complete, ready for next task assignment.
+
+---
+
 ### UNIT-TESTS (TESTER) — Done
 Unit test verification complete for UNIT-TESTS task (2026-03-17 session):
 
