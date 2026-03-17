@@ -37,6 +37,7 @@ Canonical task board for the pastor.activefaith.church project.
 
 | ID | Task | Completed | Notes |
 |----|------|-----------|-------|
+| `DEPLOY` | Deploy Angular app to Azure Static Web Apps | 2026-03-17 | COMMENTATOR agent - All quality gates pass (8 unit + 2 API + 15 E2E), build 0 errors/0 warnings, CI-CD ready for production auto-deploy on main push ✅ |
 | `CI-CD-PIPELINE` | Set up GitHub Actions + Azure Static Web Apps deployment | 2026-03-17 | CODER agent - Verified existing workflows: deploy-staging-swa.yml (staging), deploy-production-swa.yml (main + PR previews), close-pr-preview.yml. All 25 tests pass ✅ |
 | `T-ANGULAR-SSRF-FIX` | Fix Angular SSRF error by configuring allowed hosts for ng serve | 2026-03-17 | CODER agent - angular.json updated with allowedHosts ✅ |
 | `DOCS-INIT` | Initialize documentation structure | 2026-03-08 | TODO.md, LEDGER.md |
