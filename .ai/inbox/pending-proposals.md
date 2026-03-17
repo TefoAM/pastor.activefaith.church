@@ -257,3 +257,10 @@ task: UNIT-TESTS
 ---
 ** Add `npm run test:ci` script that runs `playwright install-deps` before E2E tests to prevent missing library errors in fresh environments.
 
+---
+timestamp: 2026-03-17T19:04:40.966Z
+from: commentator
+task: UNIT-TESTS
+---
+** Automate LEDGER.md commit hash updates — currently requires manual two-step process (commit docs, then update LEDGER with hash). Proposal: Add post-commit hook or script that auto-appends the commit SHA to the LEDGER entry, reducing manual steps and potential drift.
+
