@@ -337,7 +337,7 @@
   },
   {
     "taskId": "E2E-TESTS",
-    "handoffCount": 1,
+    "handoffCount": 2,
     "firstSeenAt": "2026-03-17T18:49:35.251Z",
     "completedAt": null,
     "agentRuns": []

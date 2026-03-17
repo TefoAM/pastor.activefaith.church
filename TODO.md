@@ -10,7 +10,6 @@ Canonical task board for the pastor.activefaith.church project.
 
 | ID | Task | Source |
 |----|------|--------|
-| `E2E-TESTS` | Write Playwright E2E specs for navigation and invite form | HANDOVER.md |
 | `UNIT-TESTS` | Update/add Vitest tests for 4 redesigned components | HANDOVER.md |
 | `IMAGE-OPTIMIZE` | Convert raw JPGs to WebP and apply NgOptimizedImage to About/Media/Contact | HANDOVER.md |
 | `CI-CD-PIPELINE` | Set up GitHub Actions + Azure Static Web Apps deployment | HANDOVER.md |
@@ -46,6 +45,7 @@ Canonical task board for the pastor.activefaith.church project.
 | `DOCS-BOOTSTRAP-TODO-LEDGER` | Bootstrap TODO ledger system | 2026-03-09 | CODER agent |
 | `IDLE-ROUTING` | Task routing and analysis | 2026-03-17 | ORCHESTRATOR agent |
 | `GIT-INIT` | Initialize git repository and create first commit | 2026-03-17 | TESTER agent - Unit 8/8 ✅, API 2/2 ✅, E2E 15/15 ✅ (flake resolved) |
+| `E2E-TESTS` | Write Playwright E2E specs for navigation and invite form | 2026-03-17 | TESTER agent - 15/15 E2E pass ✅ (routes, form validation, visual snapshots) |
 
 ---
 
@@ -57,4 +57,3 @@ Canonical task board for the pastor.activefaith.church project.
 |----|------|-------|----------|-------|
 | T-idle-cleanup-3561 | idle cleanup | orchestrator | P0 | Completed |
 | T-find-something-to-do-5723 | find something to do | orchestrator | P0 | Completed |
-- [ ] **E2E-TESTS**: Write Playwright E2E specs for navigation and invite form | Owner: **TESTER** | Status: **InProgress** | Priority: **P2**
