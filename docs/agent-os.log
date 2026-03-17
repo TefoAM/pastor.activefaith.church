@@ -201,3 +201,8 @@ Structured log of agent sessions. For human-readable summaries, see `activity-lo
 [2026-03-17T21:26:37.899Z] 🔄 Adaptive retry for coder (error: timeout, attempt: 0, delay: 12946ms)
 [2026-03-17T21:26:47.618Z] 🚀 [AUTONOMOUS] Spawning TESTER for Task UNIT-TESTS using brand qwen (Attempt 2)
 [2026-03-17T21:26:50.851Z] 🚀 [AUTONOMOUS] Spawning CODER for Task IMAGE-OPTIMIZE using brand qwen (Attempt 2)
+[2026-03-17T21:27:30.051Z] 🚀 [AUTONOMOUS] Spawning ORCHESTRATOR for Task UNIT-TESTS using brand qwen (Attempt 1)
+[2026-03-17T21:27:55.025Z] ✅ [COMMENTATOR] Task UNIT-TESTS session ended successfully.
+[2026-03-17T21:27:55.124Z] 📥 Stored proposal for later governance (commentator UNIT-TESTS).
+[2026-03-17T21:27:56.137Z] ✅ [ORCHESTRATOR] Task UNIT-TESTS session ended successfully.
+[2026-03-17T21:27:56.148Z] 📥 Stored proposal for later governance (orchestrator UNIT-TESTS).

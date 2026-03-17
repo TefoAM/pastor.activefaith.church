@@ -355,3 +355,17 @@ task: MADGE-001
 ---
 ** Before attempting API routing, verify available endpoints by reading the API source code or checking an API schema/README to avoid failed routing attempts.
 
+---
+timestamp: 2026-03-17T21:27:55.112Z
+from: commentator
+task: UNIT-TESTS
+---
+** Automate LEDGER.md commit hash updates — currently requires manual two-step process (commit docs, then update LEDGER with hash). Proposal: Add post-commit hook or script that auto-appends the commit SHA to the LEDGER entry, reducing manual steps and potential drift.
+
+---
+timestamp: 2026-03-17T21:27:56.147Z
+from: orchestrator
+task: UNIT-TESTS
+---
+** Before attempting API routing, verify available endpoints by reading the API source code or checking an API schema/README to avoid failed routing attempts.
+

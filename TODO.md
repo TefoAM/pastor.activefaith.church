@@ -10,7 +10,6 @@ Canonical task board for the pastor.activefaith.church project.
 
 | ID | Task | Source |
 |----|------|--------|
-| `UNIT-TESTS` | Update/add Vitest tests for 4 redesigned components | HANDOVER.md |
 | `IMAGE-OPTIMIZE` | Convert raw JPGs to WebP and apply NgOptimizedImage to About/Media/Contact | HANDOVER.md |
 
 ---
@@ -29,7 +28,6 @@ Canonical task board for the pastor.activefaith.church project.
 
 | ID | Task | Tested | Notes |
 |----|------|--------|-------|
-| `UNIT-TESTS` | Update/add Vitest tests for 4 redesigned components | 2026-03-17 | TESTER agent - 8/8 unit tests pass ✅ |
 
 ---
 
@@ -37,6 +35,7 @@ Canonical task board for the pastor.activefaith.church project.
 
 | ID | Task | Completed | Notes |
 |----|------|-----------|-------|
+| `UNIT-TESTS` | Update/add Vitest tests for 4 redesigned components | 2026-03-17 | TESTER agent - All 25 tests pass (8 unit + 2 API + 15 E2E), 4 redesigned components covered (Home, Invite, Header, App) ✅ |
 | `MADGE-001` | Install madge and create dependency analysis plan | 2026-03-17 | CODER agent - Madge installed, 0 circular dependencies found, analysis doc at docs/MADGE-001-dependency-analysis.md ✅ |
 | `DEPLOY` | Deploy Angular app to Azure Static Web Apps | 2026-03-17 | COMMENTATOR agent - All quality gates pass (8 unit + 2 API + 15 E2E), build 0 errors/0 warnings, CI-CD ready for production auto-deploy on main push ✅ |
 | `CI-CD-PIPELINE` | Set up GitHub Actions + Azure Static Web Apps deployment | 2026-03-17 | CODER agent - Verified existing workflows: deploy-staging-swa.yml (staging), deploy-production-swa.yml (main + PR previews), close-pr-preview.yml. All 25 tests pass ✅ |
