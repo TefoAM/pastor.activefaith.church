@@ -449,3 +449,32 @@ Image optimization complete for IMAGE-OPTIMIZE task:
 **Handoff:** Sent to REVIEWER via POST /api/message — IMAGE-OPTIMIZE complete.
 
 ---
+
+### UNIT-TESTS (TESTER) — Done
+Unit test verification complete for UNIT-TESTS task (2026-03-17 session):
+
+**Test Results:**
+| Suite | Status | Details |
+|-------|--------|---------|
+| Unit Tests (Vitest) | ✅ PASS | 8/8 tests (4 files: app.spec.ts, home.spec.ts, header.spec.ts, invite.spec.ts) |
+| API Tests | ✅ PASS | 2/2 tests (schema validation, form type rejection) |
+| E2E Tests (Playwright) | ✅ PASS | 15/15 tests — all passing |
+
+**Acceptance Criteria Verification:**
+- ✅ 4 redesigned components from HANDOVER.md covered: Home, Invite, Header, App
+- ✅ Home tests: component creation + hero title rendering
+- ✅ Invite tests: component creation + form validation (invalid/valid states)
+- ✅ Header tests: component creation + navigation links verification
+- ✅ App tests: component creation
+- ✅ Build passes: 0 errors, 0 warnings
+- ✅ TODO.md updated: UNIT-TESTS moved to Done section
+
+**Summary:**
+All 25 tests pass (8 unit + 2 API + 15 E2E). Existing Vitest tests already cover all 4 redesigned components from HANDOVER.md with appropriate specs for component creation, form validation, and navigation. No test modifications required — acceptance criteria fully met.
+
+**Commits:**
+- `42d77ca` — test: UNIT-TESTS complete — all 25 tests pass (8 unit + 2 API + 15 E2E), TODO.md updated
+
+**Handoff:** Sent to REVIEWER via POST /api/message — UNIT-TESTS complete.
+
+---
