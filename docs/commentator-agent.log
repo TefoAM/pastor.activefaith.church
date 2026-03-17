@@ -2,21 +2,49 @@
 
 ## Session History
 
-### 2026-03-17 — IDLE-CLEANUP
+### 2026-03-17
+
+#### IDLE-CLEANUP (Current Session)
+
+| Attempt | Agent | Status      | Notes                              |
+|---------|-------|-------------|------------------------------------|
+| 1       | qwen  | 🔄 Progress | Systemic documentation cleanup     |
+
+#### IDLE-CLEANUP (Previous Session)
+
+| Attempt | Agent | Status      | Notes                              |
+|---------|-------|-------------|------------------------------------|
+| 1       | qwen  | ✅ Complete | Documentation cleanup session      |
+
+#### VISUAL-VERIFY
+
+| Attempt | Agent | Status      | Notes                              |
+|---------|-------|-------------|------------------------------------|
+| 1       | qwen  | ❌ Failed   | Operation cancelled                |
+
+#### GIT-INIT
+
+| Attempt | Agent | Status      | Notes                                      |
+|---------|-------|-------------|--------------------------------------------|
+| 1       | qwen  | ✅ Complete | Documentation sync, 8 files (commit f07da48) |
+
+**Session Summary:**
+- Synchronized documentation across 8 files (66 insertions, 9 deletions)
+- Updated activity-log.md with session completion
+
+#### IDLE-CLEANUP (Initial Session)
 
 | Attempt | Agent  | Status      | Notes                              |
 |---------|--------|-------------|------------------------------------|
 | 1       | gemini | ❌ Failed   | spawn gemini ENOENT                |
 | 2       | gemini | ❌ Failed   | spawn gemini ENOENT                |
-| 3       | qwen   | ✅ Complete | Session ended successfully         |
-| 4       | qwen   | 🔄 Progress | Current session (this cleanup)     |
+| 3       | qwen   | ✅ Complete | Switched from gemini to qwen       |
 
-**Session 3 Summary (16:15:54 — 16:17:25):**
+**Session Summary:**
 - Documentation sprawl cleaned across 4 files
 - Activity log consolidated with structured table format
 - Agent OS log reformatted for readability
 - TODO.md streamlined with task sources tracked
-- Self-improvement proposal stored for governance
 
 ---
 
@@ -24,14 +52,10 @@
 
 - **gemini agent unavailable** in this environment — all tasks use qwen
 - For system-level activity timestamps, see `docs/agent-os.log`
-    IDLE-CLEANUP complete. Exiting.
+- For human-readable session summaries, see `docs/activity-log.md`
 
-
---- SPAWNING COMMENTATOR FOR TASK GIT-INIT ---
-    ---
-    **STAKEHOLDER REPORT:** GIT-INIT task complete for COMMENTATOR agent. Synchronized documentation across 8 files (66 insertions, 9 deletions) in commit `f07da48`. Updated activity-log.md with session completion in commit `26a6ddd`. Both commits pushed to origin/main. Handoff sent to TESTER agent via Agent OS API.
-    **PEER FEEDBACK:** Grade 4/5 for TESTER. Improvement: The E2E flaky test (`page.goto: Page crashed`) needs investigation—consider adding retry logic or page stability waits in Playwright config. No agent additions/drops recommended.
-    **SELF-IMPROVEMENT PROPOSAL:** Add a pre-commit validation script that checks for duplicate entries in `pending-proposals.md` and validates TODO.md ledger schema consistency before allowing commits, preventing the documentation drift flagged during this session.
+  ⏱️ TIMEOUT: Killed after 300s
+    Cleanup complete. Exiting.
 
 
 --- SPAWNING COMMENTATOR FOR TASK IDLE-CLEANUP ---

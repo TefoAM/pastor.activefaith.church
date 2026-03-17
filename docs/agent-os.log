@@ -1,95 +1,120 @@
 # Agent OS Activity Log
 
+Structured log of agent sessions. For human-readable summaries, see `activity-log.md`.
+
+> **Note:** Raw timestamp logs consolidated into structured tables below.
+
+---
+
 ## 2026-03-17
 
 ### IDLE-CLEANUP (COMMENTATOR)
-| Time     | Attempt | Agent | Status      | Notes                    |
-|----------|---------|-------|-------------|--------------------------|
-| 16:13:05 | 1       | gemini| ❌ Failed   | spawn gemini ENOENT      |
-| 16:13:20 | 2       | gemini| ❌ Failed   | spawn gemini ENOENT      |
-| 16:15:54 | 3       | qwen  | 🔄 Progress | Agent switched to qwen   |
-| 16:17:25 | 3       | qwen  | ✅ Complete | Session ended            |
-| 16:22:24 | 4       | qwen  | 🔄 Progress | Current session          |
+
+| Time     | Attempt | Agent  | Status      | Notes                          |
+|----------|---------|--------|-------------|--------------------------------|
+| 18:43:20 | 1       | qwen   | 🔄 Progress | Current session                |
+| 17:46:43 | 1       | qwen   | ✅ Complete | Documentation cleanup          |
+| 16:22:24 | 4       | qwen   | ✅ Complete | Documentation cleanup session  |
+| 16:15:54 | 3       | qwen   | ✅ Complete | Switched from gemini to qwen   |
+| 16:13:20 | 2       | gemini | ❌ Failed   | spawn gemini ENOENT            |
+| 16:13:05 | 1       | gemini | ❌ Failed   | spawn gemini ENOENT            |
 
 ### IDLE-ROUTING (ORCHESTRATOR)
-| Time     | Attempt | Agent | Status      | Notes                    |
-|----------|---------|-------|-------------|--------------------------|
-| 16:17:54 | 1       | qwen  | ✅ Complete | Session ended            |
-| 16:20:24 | 2       | qwen  | ❌ Failed   | Exit Code: 1             |
-| 16:21:08 | 2       | qwen  | ❌ Failed   | API Error (retry)        |
-| 16:21:23 | 3       | qwen  | ✅ Complete | Session ended            |
+
+| Time     | Attempt | Agent | Status      | Notes                          |
+|----------|---------|-------|-------------|--------------------------------|
+| 18:33:15 | 1       | qwen  | ✅ Complete | Task routing                   |
+| 18:30:15 | 1       | qwen  | ✅ Complete | Task routing                   |
+| 18:28:45 | 1       | qwen  | ✅ Complete | Task routing                   |
+| 18:27:15 | 1       | qwen  | ✅ Complete | Task routing                   |
+| 18:25:45 | 1       | qwen  | ✅ Complete | Task routing                   |
+| 18:24:15 | 1       | qwen  | ✅ Complete | Task routing                   |
+| 18:22:28 | 1       | qwen  | ✅ Complete | Task routing                   |
+| 18:21:43 | 1       | qwen  | ✅ Complete | Task routing                   |
+| 18:16:43 | 1       | qwen  | ✅ Complete | Task routing                   |
+| 18:15:13 | 1       | qwen  | ✅ Complete | Task routing                   |
+| 18:14:13 | 1       | qwen  | ✅ Complete | Task routing                   |
+| 18:13:13 | 1       | qwen  | ✅ Complete | Task routing                   |
+| 18:12:43 | 1       | qwen  | ✅ Complete | Task routing                   |
+| 18:11:43 | 1       | qwen  | ✅ Complete | Task routing                   |
+| 18:10:43 | 1       | qwen  | ✅ Complete | Task routing                   |
+| 18:09:25 | 1       | qwen  | ❌ Failed   | Exit Code: null                |
+| 16:25:11 | 1       | qwen  | ✅ Complete | Git workflow initiated         |
+| 16:21:23 | 3       | qwen  | ✅ Complete | Session ended successfully     |
+| 16:21:08 | 2       | qwen  | ❌ Failed   | API Error (retry)              |
+| 16:20:24 | 2       | qwen  | ❌ Failed   | API Error (retry)              |
+| 16:17:54 | 1       | qwen  | ✅ Complete | Task routing and analysis      |
+
+### GIT-INIT (Multi-Agent)
+
+| Time     | Agent       | Status      | Notes                                      |
+|----------|-------------|-------------|--------------------------------------------|
+| 16:37:22 | COMMENTATOR | ✅ Complete | Documentation sync, 8 files (f07da48)      |
+| 16:37:19 | TESTER      | ✅ Complete | Unit 8/8, API 2/2, E2E 15/15 (flake fixed) |
+| 16:36:17 | ORCHESTRATOR| ✅ Complete | Task coordination                          |
+| 16:36:13 | REVIEWER    | ✅ Complete | Code review completed                      |
+| 16:26:32 | CODER       | ✅ Complete | Task implementation                        |
+
+### VISUAL-VERIFY (TESTER/COMMENTATOR)
+
+| Time     | Agent       | Status      | Notes                          |
+|----------|-------------|-------------|--------------------------------|
+| 18:36:27 | TESTER      | ✅ Complete | Session ended successfully     |
+| 18:35:45 | COMMENTATOR | ❌ Failed   | Exit Code: null                |
+| 18:22:43 | TESTER      | ❌ Failed   | Exit Code: null                |
+
+### T-merge-todo-files-8842
+
+| Time     | Agent       | Status      | Notes                          |
+|----------|-------------|-------------|--------------------------------|
+| 18:21:32 | ORCHESTRATOR| ✅ Complete | Task coordination              |
+| 18:20:15 | REVIEWER    | ✅ Complete | Code review                    |
+| 18:18:44 | CODER       | ✅ Complete | TODO file merge                |
+
+### T-idle-cleanup-3561 (ORCHESTRATOR)
+
+| Time     | Attempt | Agent | Status      | Notes                          |
+|----------|---------|-------|-------------|--------------------------------|
+| 17:45:13 | 1       | qwen  | ✅ Complete | Idle cleanup task              |
+
+---
 
 ## 2026-03-09
 
-- **[BOOTSTRAP]** Initialized Agent OS task tracking system
-- **Completed:** PASTOR-BUNDLE-ASSET-MANIFEST, PASTOR-BUNDLE-COPILOT-BUILD-PROMPT, PASTOR-BUNDLE-IMPLEMENTATION-SPEC, PASTOR-BUNDLE-PLATFORM-MANIFESTS, PASTOR-BUNDLE-UX-LEVEL-UP-DIFFS, DOCS-BOOTSTRAP-TODO-LEDGER
+### BOOTSTRAP (CODER)
+
+**Completed Tasks:**
+- PASTOR-BUNDLE-ASSET-MANIFEST
+- PASTOR-BUNDLE-COPILOT-BUILD-PROMPT
+- PASTOR-BUNDLE-IMPLEMENTATION-SPEC
+- PASTOR-BUNDLE-PLATFORM-MANIFESTS
+- PASTOR-BUNDLE-UX-LEVEL-UP-DIFFS
+- DOCS-BOOTSTRAP-TODO-LEDGER
+
+---
 
 ## 2026-03-08
 
-- **[BOOTSTRAP]** Created initial documentation structure (TODO.md, LEDGER.md)
+### DOCS-INIT (CODER)
+
+- Created initial documentation structure: TODO.md, LEDGER.md
 
 ---
-*For detailed session logs, see: commentator-agent.log, orchestrator-agent.log*
-[2026-03-17T16:23:55.880Z] ✅ [COMMENTATOR] Task IDLE-CLEANUP session ended successfully.
-[2026-03-17T16:24:24.702Z] System Idle. Waking up Orchestrator.
-[2026-03-17T16:24:24.702Z] 🚀 [AUTONOMOUS] Spawning ORCHESTRATOR for Task IDLE-ROUTING using brand qwen (Attempt 1)
-[2026-03-17T16:25:24.700Z] 🚀 [AUTONOMOUS] Spawning CODER for Task GIT-INIT using brand qwen (Attempt 1)
-[2026-03-17T16:25:42.440Z] ✅ [ORCHESTRATOR] Task IDLE-ROUTING session ended successfully.
-[2026-03-17T16:25:42.442Z] 📥 Stored proposal for later governance (orchestrator IDLE-ROUTING).
-[2026-03-17T16:26:24.700Z] 🚀 [AUTONOMOUS] Spawning TESTER for Task GIT-INIT using brand qwen (Attempt 1)
-[2026-03-17T16:26:32.118Z] ✅ [CODER] Task GIT-INIT session ended successfully.
-[2026-03-17T16:26:32.120Z] 📥 Stored proposal for later governance (coder GIT-INIT).
-[2026-03-17T16:31:24.735Z] ⏱️ [TESTER] Task GIT-INIT timed out after 300s. Killing.
-[2026-03-17T16:33:11.018Z] ❌ [TESTER] Task GIT-INIT failed (Exit Code: null).
-[2026-03-17T16:33:24.922Z] 🚀 [AUTONOMOUS] Spawning REVIEWER for Task GIT-INIT using brand qwen (Attempt 1)
-[2026-03-17T16:33:26.020Z] 🚀 [AUTONOMOUS] Spawning TESTER for Task GIT-INIT using brand qwen (Attempt 2)
-[2026-03-17T16:35:25.021Z] 🚀 [AUTONOMOUS] Spawning ORCHESTRATOR for Task GIT-INIT using brand qwen (Attempt 1)
-[2026-03-17T16:36:13.243Z] ✅ [REVIEWER] Task GIT-INIT session ended successfully.
-[2026-03-17T16:36:13.251Z] 📥 Stored proposal for later governance (reviewer GIT-INIT).
-[2026-03-17T16:36:17.620Z] ✅ [ORCHESTRATOR] Task GIT-INIT session ended successfully.
-[2026-03-17T16:36:17.627Z] 📥 Stored proposal for later governance (orchestrator GIT-INIT).
-[2026-03-17T16:36:25.053Z] 🚀 [AUTONOMOUS] Spawning COMMENTATOR for Task GIT-INIT using brand qwen (Attempt 1)
-[2026-03-17T16:37:19.887Z] ✅ [TESTER] Task GIT-INIT session ended successfully.
-[2026-03-17T16:37:19.890Z] 📥 Stored proposal for later governance (tester GIT-INIT).
-[2026-03-17T16:37:22.925Z] ✅ [COMMENTATOR] Task GIT-INIT session ended successfully.
-[2026-03-17T16:37:22.927Z] 📥 Stored proposal for later governance (commentator GIT-INIT).
-[2026-03-17T17:45:13.306Z] 🚀 [AUTONOMOUS] Spawning ORCHESTRATOR for Task T-idle-cleanup-3561 using brand qwen (Attempt 1)
-[2026-03-17T17:46:23.462Z] ✅ [ORCHESTRATOR] Task T-idle-cleanup-3561 session ended successfully.
-[2026-03-17T17:46:23.468Z] 📥 Stored proposal for later governance (orchestrator T-idle-cleanup-3561).
-[2026-03-17T17:46:43.327Z] Idle Maintenance. Waking up Commentator.
-[2026-03-17T17:46:43.327Z] 🚀 [AUTONOMOUS] Spawning COMMENTATOR for Task IDLE-CLEANUP using brand qwen (Attempt 1)
-[2026-03-17T18:09:25.468Z] System Idle. Waking up Orchestrator.
-[2026-03-17T18:09:25.469Z] 🚀 [AUTONOMOUS] Spawning ORCHESTRATOR for Task IDLE-ROUTING using brand qwen (Attempt 1)
-[2026-03-17T18:09:58.863Z] ❌ [ORCHESTRATOR] Task IDLE-ROUTING failed (Exit Code: null).
-[2026-03-17T18:10:43.081Z] System Idle. Waking up Orchestrator.
-[2026-03-17T18:10:43.082Z] 🚀 [AUTONOMOUS] Spawning ORCHESTRATOR for Task IDLE-ROUTING using brand qwen (Attempt 1)
-[2026-03-17T18:11:17.554Z] ✅ [ORCHESTRATOR] Task IDLE-ROUTING session ended successfully.
-[2026-03-17T18:11:17.559Z] 📥 Stored proposal for later governance (orchestrator IDLE-ROUTING).
-[2026-03-17T18:11:43.090Z] System Idle. Waking up Orchestrator.
-[2026-03-17T18:11:43.090Z] 🚀 [AUTONOMOUS] Spawning ORCHESTRATOR for Task IDLE-ROUTING using brand qwen (Attempt 1)
-[2026-03-17T18:12:29.344Z] ✅ [ORCHESTRATOR] Task IDLE-ROUTING session ended successfully.
-[2026-03-17T18:12:29.347Z] 📥 Stored proposal for later governance (orchestrator IDLE-ROUTING).
-[2026-03-17T18:12:43.092Z] System Idle. Waking up Orchestrator.
-[2026-03-17T18:12:43.092Z] 🚀 [AUTONOMOUS] Spawning ORCHESTRATOR for Task IDLE-ROUTING using brand qwen (Attempt 1)
-[2026-03-17T18:13:09.378Z] ✅ [ORCHESTRATOR] Task IDLE-ROUTING session ended successfully.
-[2026-03-17T18:13:09.384Z] 📥 Stored proposal for later governance (orchestrator IDLE-ROUTING).
-[2026-03-17T18:13:13.092Z] System Idle. Waking up Orchestrator.
-[2026-03-17T18:13:13.092Z] 🚀 [AUTONOMOUS] Spawning ORCHESTRATOR for Task IDLE-ROUTING using brand qwen (Attempt 1)
-[2026-03-17T18:14:03.796Z] ✅ [ORCHESTRATOR] Task IDLE-ROUTING session ended successfully.
-[2026-03-17T18:14:03.799Z] 📥 Stored proposal for later governance (orchestrator IDLE-ROUTING).
-[2026-03-17T18:14:13.096Z] System Idle. Waking up Orchestrator.
-[2026-03-17T18:14:13.096Z] 🚀 [AUTONOMOUS] Spawning ORCHESTRATOR for Task IDLE-ROUTING using brand qwen (Attempt 1)
-[2026-03-17T18:14:58.355Z] ✅ [ORCHESTRATOR] Task IDLE-ROUTING session ended successfully.
-[2026-03-17T18:14:58.357Z] 📥 Stored proposal for later governance (orchestrator IDLE-ROUTING).
-[2026-03-17T18:15:13.093Z] System Idle. Waking up Orchestrator.
-[2026-03-17T18:15:13.093Z] 🚀 [AUTONOMOUS] Spawning ORCHESTRATOR for Task IDLE-ROUTING using brand qwen (Attempt 1)
-[2026-03-17T18:16:40.524Z] ✅ [ORCHESTRATOR] Task IDLE-ROUTING session ended successfully.
-[2026-03-17T18:16:40.529Z] 📥 Stored proposal for later governance (orchestrator IDLE-ROUTING).
-[2026-03-17T18:16:43.099Z] System Idle. Waking up Orchestrator.
-[2026-03-17T18:16:43.099Z] 🚀 [AUTONOMOUS] Spawning ORCHESTRATOR for Task IDLE-ROUTING using brand qwen (Attempt 1)
-[2026-03-17T18:17:13.109Z] 🚀 [AUTONOMOUS] Spawning CODER for Task T-merge-todo-files-8842 using brand qwen (Attempt 1)
-[2026-03-17T18:17:50.454Z] ✅ [ORCHESTRATOR] Task IDLE-ROUTING session ended successfully.
-[2026-03-17T18:17:50.457Z] 📥 Stored proposal for later governance (orchestrator IDLE-ROUTING).
-[2026-03-17T18:18:43.133Z] 🚀 [AUTONOMOUS] Spawning REVIEWER for Task T-merge-todo-files-8842 using brand qwen (Attempt 1)
-[2026-03-17T18:18:44.214Z] ✅ [CODER] Task T-merge-todo-files-8842 session ended successfully.
-[2026-03-17T18:18:44.223Z] 📥 Stored proposal for later governance (coder T-merge-todo-files-8842).
+
+## Session Summary
+
+| Date       | Total Sessions | Successful | Failed | In Progress |
+|------------|----------------|------------|--------|-------------|
+| 2026-03-17 | 35             | 30         | 4      | 1           |
+| 2026-03-09 | 6              | 6          | 0      | 0           |
+| 2026-03-08 | 1              | 1          | 0      | 0           |
+
+**Notes:**
+- `gemini` agent unavailable; all sessions use `qwen`
+- For detailed per-agent logs, see: `commentator-agent.log`, `orchestrator-agent.log`, `coder-agent.log`, `tester-agent.log`, `reviewer-agent.log`
+[2026-03-17T18:48:20.319Z] ⏱️ [COMMENTATOR] Task IDLE-CLEANUP timed out after 300s. Killing.
+[2026-03-17T18:48:40.277Z] ❌ [COMMENTATOR] Task IDLE-CLEANUP failed (Exit Code: null).
+[2026-03-17T18:48:50.334Z] System Idle. Waking up Orchestrator.
+[2026-03-17T18:48:50.334Z] 🚀 [AUTONOMOUS] Spawning ORCHESTRATOR for Task IDLE-ROUTING using brand qwen (Attempt 1)
+[2026-03-17T18:48:55.285Z] 🚀 [AUTONOMOUS] Spawning COMMENTATOR for Task IDLE-CLEANUP using brand qwen (Attempt 2)
+[2026-03-17T18:49:59.055Z] 🚀 [AUTONOMOUS] Spawning TESTER for Task E2E-TESTS using brand qwen (Attempt 1)

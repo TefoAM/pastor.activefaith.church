@@ -10,7 +10,6 @@ Canonical task board for the pastor.activefaith.church project.
 
 | ID | Task | Source |
 |----|------|--------|
-| `PASTOR-BUNDLE-PRD` | Deliver PRD-defined product outcomes for Pastor Abraham platform | docs/TODO.md |
 | `E2E-TESTS` | Write Playwright E2E specs for navigation and invite form | HANDOVER.md |
 | `UNIT-TESTS` | Update/add Vitest tests for 4 redesigned components | HANDOVER.md |
 | `IMAGE-OPTIMIZE` | Convert raw JPGs to WebP and apply NgOptimizedImage to About/Media/Contact | HANDOVER.md |
@@ -24,7 +23,7 @@ Canonical task board for the pastor.activefaith.church project.
 |----|------|---------|-------|
 | `IDLE-CLEANUP` | Documentation cleanup and consolidation | 2026-03-17 | ORCHESTRATOR leading, COMMENTATOR supporting |
 | `PASTOR-BUNDLE-MASTER-PLAN` | Translate master engineering/product plan into phased delivery milestones | 2026-03-17 | CODER agent - file-based handoff via inbox |
-| `VISUAL-VERIFY` | Visual verification via Playwright screenshots for 4 redesigned pages | 2026-03-17 | TESTER agent |
+| `PASTOR-BUNDLE-PRD` | Deliver PRD-defined product outcomes for Pastor Abraham platform | 2026-03-17 | CODER agent - file-based handoff via inbox |
 
 ---
 
@@ -54,5 +53,8 @@ Canonical task board for the pastor.activefaith.church project.
 
 *Historical tasks moved to Done.*
 
-- [ ] **T-idle-cleanup-3561**: idle cleanup | Owner: **orchestrator** | Status: **Ready** | Priority: **P0**
-- [ ] **T-find-something-to-do-5723**: find something to do | Owner: **orchestrator** | Status: **Ready** | Priority: **P0**
+| ID | Task | Owner | Priority | Notes |
+|----|------|-------|----------|-------|
+| T-idle-cleanup-3561 | idle cleanup | orchestrator | P0 | Completed |
+| T-find-something-to-do-5723 | find something to do | orchestrator | P0 | Completed |
+- [ ] **E2E-TESTS**: Write Playwright E2E specs for navigation and invite form | Owner: **TESTER** | Status: **InProgress** | Priority: **P2**

@@ -124,3 +124,94 @@ task: T-merge-todo-files-8842
 ---
 ** Add a pre-commit validation script that checks for duplicate entries in pending-proposals.md and validates TODO.md ledger schema consistency before allowing commits, preventing the drift that COMMENTATOR agent flagged.
 
+---
+timestamp: 2026-03-17T18:20:15.017Z
+from: reviewer
+task: T-merge-todo-files-8842
+---
+** Add `npm run preflight:ci` script that includes `playwright install-deps` before E2E tests and sets a timeout for the build step to detect esbuild deadlocks faster, reducing agent timeout delays from 300s to ~60s.
+
+---
+timestamp: 2026-03-17T18:21:32.310Z
+from: orchestrator
+task: T-merge-todo-files-8842
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+
+---
+timestamp: 2026-03-17T18:22:28.203Z
+from: orchestrator
+task: IDLE-ROUTING
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+
+---
+timestamp: 2026-03-17T18:25:29.795Z
+from: orchestrator
+task: IDLE-ROUTING
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+
+---
+timestamp: 2026-03-17T18:26:46.295Z
+from: orchestrator
+task: IDLE-ROUTING
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+
+---
+timestamp: 2026-03-17T18:28:15.842Z
+from: orchestrator
+task: IDLE-ROUTING
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+
+---
+timestamp: 2026-03-17T18:29:50.994Z
+from: orchestrator
+task: IDLE-ROUTING
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+
+---
+timestamp: 2026-03-17T18:32:27.164Z
+from: orchestrator
+task: IDLE-ROUTING
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+
+---
+timestamp: 2026-03-17T18:33:03.939Z
+from: orchestrator
+task: IDLE-ROUTING
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+
+---
+timestamp: 2026-03-17T18:34:21.894Z
+from: orchestrator
+task: IDLE-ROUTING
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+
+---
+timestamp: 2026-03-17T18:36:27.520Z
+from: tester
+task: VISUAL-VERIFY
+---
+** Add `npm run test:ci` script that runs `playwright install-deps` before E2E tests to prevent missing library errors in fresh environments.
+
+---
+timestamp: 2026-03-17T18:42:25.495Z
+from: orchestrator
+task: IDLE-ROUTING
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+
+---
+timestamp: 2026-03-17T18:43:08.399Z
+from: orchestrator
+task: IDLE-ROUTING
+---
+** Consolidate task tracking into a single TODO.md file at the repository root to avoid drift between root-level and docs/ subdirectory task boards. The ORCHESTRATOR should have one canonical source of truth for task status.
+

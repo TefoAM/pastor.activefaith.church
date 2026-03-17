@@ -120,6 +120,96 @@
         "actionCount": 0,
         "peerGrade": 4,
         "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T18:22:28.203Z",
+        "executionTimeSeconds": 45,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 4,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T18:25:29.795Z",
+        "executionTimeSeconds": 74,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 4,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T18:26:46.295Z",
+        "executionTimeSeconds": 61,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 4,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T18:28:15.843Z",
+        "executionTimeSeconds": 60,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 4,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T18:29:50.994Z",
+        "executionTimeSeconds": 65,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 4,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T18:32:27.164Z",
+        "executionTimeSeconds": 132,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 4,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T18:33:03.940Z",
+        "executionTimeSeconds": 18,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 4,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T18:34:21.894Z",
+        "executionTimeSeconds": 66,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 4,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T18:42:25.496Z",
+        "executionTimeSeconds": 125,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 4,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T18:43:08.399Z",
+        "executionTimeSeconds": 18,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 4,
+        "model": null
       }
     ]
   },
@@ -207,7 +297,49 @@
         "actionCount": 0,
         "peerGrade": 4,
         "model": null
+      },
+      {
+        "role": "reviewer",
+        "timestamp": "2026-03-17T18:20:15.017Z",
+        "executionTimeSeconds": 92,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": null,
+        "model": null
+      },
+      {
+        "role": "orchestrator",
+        "timestamp": "2026-03-17T18:21:32.310Z",
+        "executionTimeSeconds": 79,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 4,
+        "model": null
       }
     ]
+  },
+  {
+    "taskId": "VISUAL-VERIFY",
+    "handoffCount": 3,
+    "firstSeenAt": "2026-03-17T18:22:21.585Z",
+    "completedAt": null,
+    "agentRuns": [
+      {
+        "role": "tester",
+        "timestamp": "2026-03-17T18:36:27.520Z",
+        "executionTimeSeconds": 162,
+        "retryCount": 0,
+        "actionCount": 0,
+        "peerGrade": 4,
+        "model": null
+      }
+    ]
+  },
+  {
+    "taskId": "E2E-TESTS",
+    "handoffCount": 1,
+    "firstSeenAt": "2026-03-17T18:49:35.251Z",
+    "completedAt": null,
+    "agentRuns": []
   }
 ]
